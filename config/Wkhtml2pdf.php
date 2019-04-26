@@ -3,7 +3,7 @@
 return [
 
     'debug'       => env('APP_DEBUG_PDF', true),
-    'binpath'     => 'C:\qaxe\vendor\nitmedia\wkhtml2pdf-cp\src\Nitmedia\Wkhtml2pdf\lib',
+    'binpath'     => 'lib/',
     'binfile'     => env('WKHTML2PDF_BIN_FILE', 'wkhtmltopdf-amd64'),
     'output_mode' => 'I',
 ];
