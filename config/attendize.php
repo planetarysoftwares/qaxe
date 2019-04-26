@@ -6,8 +6,8 @@ return [
 
     'ticket_status_sold_out'        => 1,
     'ticket_status_after_sale_date' => 2,//
-    'enable_test_payments'          => env('ENABLE_TEST_PAYMENTS', true),
-    'enable_dummy_payment_gateway'  => true,
+    'enable_test_payments'          => env('ENABLE_TEST_PAYMENTS', false),
+    'enable_dummy_payment_gateway'  => false,
     'payment_gateway_dummy'    => 0,
     'payment_gateway_stripe'   => 1,
     'payment_gateway_paypal'   => 2,
@@ -22,7 +22,7 @@ return [
     'outgoing_email_name'    => env('MAIL_FROM_NAME'),
     'incoming_email'         => env('MAIL_FROM_ADDRESS'),
 
-    'app_name'               => 'QAXE',
+    'app_name'               => 'Attendize Event Ticketing',
     'event_default_bg_color' => '#B23333',
     'event_default_bg_image' => 'assets/images/public/EventPage/backgrounds/5.jpg',
 
@@ -59,14 +59,14 @@ return [
     'question_radio_single'         => 6,
 
 
-    'default_timezone'           => 55, #Africa/Harare
-    'default_currency'           => 29, #Rand
+    'default_timezone'           => 30, #Europe/Dublin
+    'default_currency'           => 2, #Euro
     'default_date_picker_format' => env('DEFAULT_DATEPICKER_FORMAT', 'yyyy-MM-dd HH:mm'),
     'default_date_picker_seperator' => env('DEFAULT_DATEPICKER_SEPERATOR', '-'),
     'default_datetime_format'    => env('DEFAULT_DATETIME_FORMAT', 'Y-m-d H:i'),
     'default_query_cache'        => 120, #Minutes
     'default_locale'             => 'en',
-    'default_payment_gateway'    => 1, #Stripe=1 Paypal=2 BitPay=3 MIGS=4
+    'default_payment_gateway'    => 1, #Stripe=1 Paypal=2
 
     'cdn_url_user_assets'   => '',
     'cdn_url_static_assets' => ''

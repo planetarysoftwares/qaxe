@@ -194,31 +194,8 @@ Route::group(
     ]);
 
     /*
-     * Public ranks routes
-     */
-
-      Route::get('/ranks', [
-            'as'   => 'showOrganisers',
-            'uses' => 'PassengerController@showOrganisers',
-        ]);
-
-      /*
-         * Public ranks routes
-         */
-        Route::group(['prefix' => 'ranks'], function () {
-
-            Route::get('/{organiser_id}/{organier_slug?}', [
-                'as'   => 'showOrganiserHome',
-                'uses' => 'OrganiserViewController@showOrganiserHome',
-            ]);
-
-        });
-
-    /*
      * Backend routes
      */
-
-
     Route::group(['middleware' => ['auth', 'first.run']], function () {
 
         /*
@@ -271,10 +248,6 @@ Route::group(
         /*
          * Organiser routes
          */
-
-
-
-
         Route::group(['prefix' => 'organiser'], function () {
 
             Route::get('{organiser_id}/dashboard', [
@@ -368,8 +341,7 @@ Route::group(
                     $event = \App\Models\Event::scope()->findOrFail($event_id);
                     $event->is_live = 1;
                     $event->save();
-                    \Session::flash('message',
-                        'Event Successfully Made Live! You can undo this action in event settings page.');
+                    \Session::flash('message', trans('Event.go_live'));
 
                     return Redirect::route('showEventDashboard', [
                         'event_id' => $event_id,
@@ -616,19 +588,6 @@ Route::group(
                 'uses' => 'EventCustomizeController@postEditEventFees',
             ]);
 
-            /**
-             * Event access codes
-             */
-            Route::get('{event_id}/access_codes/create', [
-                'as'   => 'showCreateEventAccessCode',
-                'uses' => 'EventAccessCodesController@showCreate',
-            ]);
-
-            Route::post('{event_id}/access_codes/create', [
-                'as'   => 'postCreateEventAccessCode',
-                'uses' => 'EventAccessCodesController@postCreate',
-            ]);
-
             /*
              * -------
              * Event Widget page
@@ -637,6 +596,31 @@ Route::group(
             Route::get('{event_id}/widgets', [
                 'as'   => 'showEventWidgets',
                 'uses' => 'EventWidgetsController@showEventWidgets',
+            ]);
+
+            /*
+             * -------
+             * Event Access Codes page
+             * -------
+             */
+            Route::get('{event_id}/access_codes', [
+                'as'   => 'showEventAccessCodes',
+                'uses' => 'EventAccessCodesController@show',
+            ]);
+
+            Route::get('{event_id}/access_codes/create', [
+                'as' => 'showCreateEventAccessCode',
+                'uses' => 'EventAccessCodesController@showCreate',
+            ]);
+
+            Route::post('{event_id}/access_codes/create', [
+                'as' => 'postCreateEventAccessCode',
+                'uses' => 'EventAccessCodesController@postCreate',
+            ]);
+
+            Route::post('{event_id}/access_codes/{access_code_id}/delete', [
+                'as' => 'postDeleteEventAccessCode',
+                'uses' => 'EventAccessCodesController@postDelete',
             ]);
 
             /*
