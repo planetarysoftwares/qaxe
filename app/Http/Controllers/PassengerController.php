@@ -17,7 +17,7 @@ class PassengerController extends Controller
      */
     public function showOrganisers()
     {
-        $organiser = Organiser::all(); //LU
+        $organiser = Organiser::all(); //TODO:LU Investigate a better way
 
         $data = [
             'organisers' => $organiser,
