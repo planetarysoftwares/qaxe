@@ -14,7 +14,7 @@ return array (
   'bitpay_api_key' => 'BitPay API key',
   'bitpay_settings' => 'Bitpay Settings',
   'branding_name' => 'Branding name',
-  'branding_name_help' => 'This is the name buyers will see when checking out. Leave this blank if you want the event organiser\'s name to be used.',
+  'branding_name_help' => 'This is the name buyers will see when checking out. Leave this blank if you want the queue rank\'s name to be used.',
   'coinbase_settings' => 'Coinbase Settings',
   'default_currency' => 'Default currency',
   'default_payment_gateway' => 'Default payment gateway',
@@ -48,5 +48,5 @@ return array (
   'version_out_of_date' => 'Your version (<b>:installed</b>) of Attendize is out of date. The latest version (<b>:latest</b>) can be <a href=":url" target="_blank">downloaded here</a>',
   'version_up_to_date' => 'Your Attendize version (<b>:installed</b>) is up to date!',
     'account_payment' => 'Account / Payment',
-    'event_attendees' => 'Event attendees',
+    'event_attendees' => 'Queue passengers',
 );

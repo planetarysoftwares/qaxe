@@ -5,7 +5,7 @@
 
 return array (
   //============================== New strings to translate ==============================//
-  'event_page_preview' => 'Event Page Preview',
+  'event_page_preview' => 'Queue Page Preview',
   //==================================== Translations ====================================//
   'background_options' => 'Background Options',
   'images_provided_by_pixabay' => 'Images Provided By <b>PixaBay.com</b>',
