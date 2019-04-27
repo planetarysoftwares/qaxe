@@ -16,7 +16,7 @@
     <h3>Resumen del pedido</h3>
     Referencia de pedido: <b>{{$order->order_reference}}</b><br>
     Nombre del pedido: <b>{{$order->full_name}}</b><br>
-    Fecha del pedido: <b>{{$order->created_at->toDayDateTimeString()}}</b><br>
+    Fecha del pedido: <b>{{$order->created_at->format(config('attendize.default_datetime_format'))}}</b><br>
     Correo electrónico del pedido: <b>{{$order->email}}</b><br>
     <a href="{!! route('downloadCalendarIcs', ['event_id' => $order->event->id]) !!}">Añadir al Calendario</a>
     <h3>Order Items</h3>
@@ -48,7 +48,7 @@
                         {{$order_item->quantity}}
                     </td>
                     <td>
-                        @if((int)ceil($order_item->unit_price) == 0)
+                        @isFree($order_item->unit_price)
                             GRATIS
                         @else
                             {{money($order_item->unit_price, $order->event->currency)}}
@@ -56,7 +56,7 @@
 
                     </td>
                     <td>
-                        @if((int)ceil($order_item->unit_price) == 0)
+                        @isFree($order_item->unit_price)
                             -
                         @else
                             {{money($order_item->unit_booking_fee, $order->event->currency)}}
@@ -64,7 +64,7 @@
 
                     </td>
                     <td>
-                        @if((int)ceil($order_item->unit_price) == 0)
+                        @isFree($order_item->unit_price)
                             GRATIS
                         @else
                             {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity), $order->event->currency)}}

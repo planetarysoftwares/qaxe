@@ -11,7 +11,7 @@ Vos billets sont joints à ce message. Vous pouvez aussi voir les détails de vo
 <h3>Détails de la commande</h3>
 Référence de la commande : <b>{{$order->order_reference}}</b><br>
 Nom de la commande : <b>{{$order->full_name}}</b><br>
-Date de la commande : <b>{{$order->created_at->toDayDateTimeString()}}</b><br>
+Date de la commande : <b>{{$order->created_at->format(config('attendize.default_datetime_format'))}}</b><br>
 Courriel de la commande : <b>{{$order->email}}</b><br>
 
 <h3>Éléments de la commande</h3>
@@ -43,7 +43,7 @@ Courriel de la commande : <b>{{$order->email}}</b><br>
                                         {{$order_item->quantity}}
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
+                                        @isFree($order_item->unit_price)
                                         GRATUIT
                                         @else
                                        {{money($order_item->unit_price, $order->event->currency)}}
@@ -51,7 +51,7 @@ Courriel de la commande : <b>{{$order->email}}</b><br>
 
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
+                                        @isFree($order_item->unit_price)
                                         -
                                         @else
                                         {{money($order_item->unit_booking_fee, $order->event->currency)}}
@@ -59,7 +59,7 @@ Courriel de la commande : <b>{{$order->email}}</b><br>
 
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
+                                        @isFree($order_item->unit_price)
                                         GRATUIT
                                         @else
                                         {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity), $order->event->currency)}}
