@@ -26,8 +26,8 @@ class Event extends MyBaseModel
                 'description'         => 'required',
                 'location_venue_name' => 'required_without:venue_name_full',
                 'venue_name_full'     => 'required_without:location_venue_name',
-                'start_date'          => 'required|date_format:"'.$format.'"',
-                'end_date'            => 'required|date_format:"'.$format.'"',
+                'start_date'          => 'date_format:"'.$format.'"',//TODO:LU Hack to make date non mandatory field
+                'end_date'            => 'date_format:"'.$format.'"',//TODO:LU Hack to make date non mandatory field
                 'organiser_name'      => 'required_without:organiser_id',
                 'event_image'         => 'mimes:jpeg,jpg,png|max:3000',
             ];

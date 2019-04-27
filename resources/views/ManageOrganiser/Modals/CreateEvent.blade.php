@@ -27,7 +27,7 @@
                                         'rows' => 5
                                         ))  !!}
                         </div>
-                        <div class="row">
+                       <!---- <div class="row">  =======TODO:LU Remove start and end date input fields
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('start_date', trans("Event.event_start_date"), array('class'=>'required control-label')) !!}
@@ -60,7 +60,7 @@
                                         ])  !!}
                                 </div>
                             </div>
-                        </div>
+                        </div> END Hack--->
                         <div class="form-group">
                             {!! Form::label('event_image', trans("Event.event_image"), array('class'=>'control-label ')) !!}
                             {!! Form::styledFile('event_image') !!}
