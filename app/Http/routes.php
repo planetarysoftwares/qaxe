@@ -194,27 +194,6 @@ Route::group(
     ]);
 
     /*
-     * Public ranks routes
-     */
-
-      Route::get('/ranks', [
-            'as'   => 'showOrganisers',
-            'uses' => 'PassengerController@showOrganisers',
-        ]);
-
-      /*
-         * Public ranks routes
-         */
-        Route::group(['prefix' => 'ranks'], function () {
-
-            Route::get('/{organiser_id}/{organier_slug?}', [
-                'as'   => 'showOrganiserHome',
-                'uses' => 'OrganiserViewController@showOrganiserHome',
-            ]);
-
-        });
-
-    /*
      * Backend routes
      */
     Route::group(['middleware' => ['auth', 'first.run']], function () {
@@ -740,19 +719,53 @@ Route::group(
             ]);
         });
     });
-
+/**TODO:Lu Redirects to home page.
     Route::get('/', function () {
         return Redirect::route('showSelectOrganiser');
         // I prefer it that way:
         // return Redirect::route('showOrganiserHome', ["organiser_id"=>1]);
     });
-
+*/
     Route::get('/terms_and_conditions', [
         'as' => 'termsAndConditions',
         function () {
             return 'TODO: add terms and cond';
         }
     ]);
+
+    ////TODO:LU============================================Extension=========================================================================
+
+      /*
+         * Public home page routes
+         */
+
+          Route::get('/', [
+                'as'   => 'showOrganisers',
+                'uses' => 'PassengerController@showOrganisers',
+            ]);
+
+
+            /*
+             * Public ranks routes
+             */
+
+              Route::get('/ranks', [
+                    'as'   => 'showOrganisers',
+                    'uses' => 'PassengerController@showOrganisers',
+                ]);
+
+          /*
+             * Public queue routes
+             */
+            Route::group(['prefix' => 'ranks'], function () {
+
+                Route::get('/{organiser_id}/{organier_slug?}', [
+                    'as'   => 'showOrganiserHome',
+                    'uses' => 'OrganiserViewController@showOrganiserHome',
+                ]);
+
+            });
+
 
 });
 
