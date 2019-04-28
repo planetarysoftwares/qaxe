@@ -77,6 +77,7 @@ class EventCheckInController extends MyBaseController
                 'attendees.has_arrived',
                 'tickets.title as ticket',
                 'orders.order_reference',
+                'orders.expiry_date',//TODO:LU Get order expiry date
                 'orders.is_payment_received'
             ])
             ->orderBy('attendees.first_name', 'ASC')

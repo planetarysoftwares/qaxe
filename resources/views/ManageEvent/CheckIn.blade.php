@@ -93,6 +93,8 @@
                         <br>
                             @lang("Order.reference"): <b>@{{ attendee.order_reference + '-' + attendee.reference_index }}</b>
                         <br>
+                            @lang("Order.expiry_date"): <b>@{{ attendee.expiry_date}}</b> <!---Adds order expiry date-->
+                        <br>
                             @lang("Order.ticket"): <b>@{{ attendee.ticket }}</b>
                         <a href="" class="ci btn btn-successfulQrRead">
                             <i class="ico-checkmark"></i>

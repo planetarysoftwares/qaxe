@@ -76,7 +76,7 @@
                                 <h4>@lang("Ticket.start_date_time")</h4>
                                 {{$event->startDateFormatted()}}
                                 <h4>@lang("Ticket.end_date_time")</h4>
-                                {{$event->endDateFormatted()}}
+                                {{$order->expiry_date}} <!---TODO:Lu Added order expiry date -->
                         </div>
 
                         <div class="attendee_details">
