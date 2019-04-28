@@ -12,6 +12,6 @@ return array (
   //==================================== Translations ====================================//
   'no_events' => 'There are no :panel_title to display.',
   'organiser_dashboard' => 'Rank Dashboard',
-  'past_events' => 'Past queus',
-  'upcoming_events' => 'Upcoming queus',
+  'past_events' => 'Past queues',
+  'upcoming_events' => 'Upcoming queues',
 );

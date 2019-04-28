@@ -30,7 +30,7 @@ return array (
   'n_attendees_for_event' => ':num Passenger(s) for queue: :name (:date)',
   'no_events_yet' => 'No Queue Yet!',
   'no_events_yet_text' => 'Looks like you have yet to create an queue. You can create one by clicking the button below.',
-  'num_events' => ':num Queus',
+  'num_events' => ':num Queues',
   'or(manual/existing_venue)' => 'or',
   'payment_cancelled' => 'You cancelled your payment. You may try again.',
   'post_code' => 'Post Code',
