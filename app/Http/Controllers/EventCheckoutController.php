@@ -528,6 +528,7 @@ class EventCheckoutController extends Controller
             $order->first_name = strip_tags($request_data['order_first_name']);
             $order->last_name = strip_tags($request_data['order_last_name']);
             $order->email = $request_data['order_email'];
+            $order->expiry_date = date("Y-m-d H:i", strtotime('+1 month'));//TODO:LU adds order expiry date
             $order->order_status_id = isset($request_data['pay_offline']) ? config('attendize.order_awaiting_payment') : config('attendize.order_complete');
             $order->amount = $ticket_order['order_total'];
             $order->booking_fee = $ticket_order['booking_fee'];
