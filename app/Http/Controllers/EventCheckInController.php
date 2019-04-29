@@ -69,6 +69,7 @@ class EventCheckInController extends MyBaseController
             })
             ->select([
                 'attendees.id',
+                'attendees.profile_photo',//TODO:LU Get user profile photo
                 'attendees.first_name',
                 'attendees.last_name',
                 'attendees.email',

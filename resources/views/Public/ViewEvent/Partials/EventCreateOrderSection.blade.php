@@ -111,6 +111,16 @@
                                         </h3>
                                     </div>
                                     <div class="panel-body">
+                                    <!-- TODO :LU Added profile photo -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    {!! Form::label("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.profile_photo")) !!}
+                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo form-control"]) !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <!-- End adding profile photo-->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">

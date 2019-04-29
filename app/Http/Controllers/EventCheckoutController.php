@@ -25,6 +25,12 @@ use Omnipay;
 use PDF;
 use PhpSpec\Exception\Exception;
 use Validator;
+use Image;
+
+
+
+
+
 
 class EventCheckoutController extends Controller
 {
@@ -152,10 +158,14 @@ class EventCheckoutController extends Controller
                 /*
                  * Create our validation rules here
                  */
+                $validation_rules['ticket_holder_profile_photo.' . $i . '.' . $ticket_id] = ['required:mimes:jpeg,jpg,png|max:3000']; //LU: Add ticket profile photo validation rule
                 $validation_rules['ticket_holder_first_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_last_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_email.' . $i . '.' . $ticket_id] = ['required', 'email'];
 
+                $validation_messages['ticket_holder_profile_photo.' . $i . '.' . $ticket_id . '.required'] = 'Ticket holder ' . ($i + 1) . '\'s profile photo is required';//LU: Add ticket profile photo validation message
+                $validation_messages['ticket_holder_profile_photo.' . $i . '.' . $ticket_id . '.mimes'] = 'Ticket holder ' . ($i + 1) . '\'s Please ensure you are uploading an image (JPG, PNG, JPEG)';//LU: Add ticket profile photo validation message
+                $validation_messages['ticket_holder_profile_photo.' . $i . '.' . $ticket_id . '.max'] = 'Ticket holder ' . ($i + 1) . '\'s Please ensure the profile photo is not larger then 3MB';//LU: Add ticket profile photo validation message
                 $validation_messages['ticket_holder_first_name.' . $i . '.' . $ticket_id . '.required'] = 'Ticket holder ' . ($i + 1) . '\'s first name is required';
                 $validation_messages['ticket_holder_last_name.' . $i . '.' . $ticket_id . '.required'] = 'Ticket holder ' . ($i + 1) . '\'s last name is required';
                 $validation_messages['ticket_holder_email.' . $i . '.' . $ticket_id . '.required'] = 'Ticket holder ' . ($i + 1) . '\'s email is required';
@@ -619,8 +629,32 @@ class EventCheckoutController extends Controller
                     $attendee->ticket_id = $attendee_details['ticket']['id'];
                     $attendee->account_id = $event->account->id;
                     $attendee->reference_index = $attendee_increment;
-                    $attendee->save();
+                 /*
+                  * LU======================================================extension to upload profile photo ========================
+                  */
+                    if ($request_data["ticket_holder_profile_photo"][$i][$attendee_details['ticket']['id']]) {
+                        $the_file = $request_data["ticket_holder_profile_photo"][$i][$attendee_details['ticket']['id']];
+                        $file_name = 'profile_photo-' . md5(microtime()) . '.' . strtolower(($the_file)->getClientOriginalExtension());
 
+                        $relative_path_to_file = config('attendize.profile_photo_path') . '/' . $file_name;
+                        $full_path_to_file = public_path() . '/' . $relative_path_to_file;
+
+                        $img = Image::make($the_file);
+
+                        $img->resize(1000, null, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        });
+
+                        $img->save($full_path_to_file);
+
+
+                       $attendee->profile_photo = $relative_path_to_file;
+                    }
+                     /*
+                      *======================================================END extension ========================
+                      */
+                    $attendee->save();
 
                     /*
                      * Save the attendee's questions
@@ -770,6 +804,5 @@ class EventCheckoutController extends Controller
         }
         return view('Public.ViewEvent.Partials.PDFTicket', $data);
     }
-
 }
 
