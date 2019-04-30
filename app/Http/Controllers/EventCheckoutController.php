@@ -817,5 +817,6 @@ class EventCheckoutController extends Controller
         }
         return view('Public.ViewEvent.Partials.PDFTicket', $data);
     }
+
 }
 
