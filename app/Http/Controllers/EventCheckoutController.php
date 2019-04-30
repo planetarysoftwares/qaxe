@@ -158,7 +158,7 @@ class EventCheckoutController extends Controller
                 /*
                  * Create our validation rules here
                  */
-                $validation_rules['ticket_holder_profile_photo.' . $i . '.' . $ticket_id] = ['required:mimes:jpeg,jpg,png|max:3000']; //LU: Add ticket profile photo validation rule
+                $validation_rules['ticket_holder_profile_photo.' . $i . '.' . $ticket_id] = ['required','image', 'mimes:jpeg,jpg,png', 'max:3000']; //LU: Add ticket profile photo validation rule
                 $validation_rules['ticket_holder_first_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_last_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_email.' . $i . '.' . $ticket_id] = ['required', 'email'];
@@ -641,10 +641,23 @@ class EventCheckoutController extends Controller
 
                         $img = Image::make($the_file);
 
-                        $img->resize(1000, null, function ($constraint) {
+                        $img->resize(800, null, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         });
+
+                        $img->insert(public_path('assets/images/watermark/large-drop-watermark.png'));
+
+                        $img->text('Qaxe @@@',10, 10, function($font) {
+                           $font->size(28);
+                           $font->color('#fdf6e3');
+                           $font->align('center');
+                           $font->valign('bottom');
+                           $font->angle(90);
+                        });
+
+                        $img->insert(public_path('assets/images/watermark/small-drop-watermark.png'));
+
 
                         $img->save($full_path_to_file);
 

@@ -116,7 +116,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.profile_photo")) !!}
-                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo form-control"]) !!}
+                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo form-control"]) !!}
                                                 </div>
                                             </div>
                                         </div>
