@@ -12,7 +12,7 @@
     -->
     <title>
         @section('title')
-            Attendize -
+            QAXE -
         @show
     </title>
 

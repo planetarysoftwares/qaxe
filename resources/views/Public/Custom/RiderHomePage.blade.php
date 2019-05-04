@@ -3,7 +3,7 @@
 <head>
     <title>
         @section('title')
-            Attendize -
+            QAXE - Buy Tickets online
         @show
     </title>
 
