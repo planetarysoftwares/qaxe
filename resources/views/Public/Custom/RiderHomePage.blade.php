@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="{{route('showRiderPage')}}">Rider</a></li>
-                         <li><a href="{{route('showRankPage')}}">Rank</a></li>
+                        <li><a href="{{route('showRankPage')}}">Rank</a></li>
                     </ul>
                 </div>
                 <div class="search">
@@ -198,29 +198,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <p>{!!HTML::image('assets/custom/rider/images/rider/clients.png','', ['class' => 'img-responsive'])!!}</p>
-                        <h1 class="title">Happy Clients</h1>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>
-                    </div>
-                    <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client1.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client2.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
-                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client3.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
-                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client4.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
-                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client5.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
-                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/rider/images/rider/client6.png','', ['class' => 'img-responsive'])!!}</a>
-                        </div>
+                        <p>{!!HTML::image('assets/custom/rider/images/rider/goodbye.gif','', ['class' => 'img-responsive'])!!}</p>
+                        <h1 class="title">Say Goodbye to Long Queues</h1>
+                        <p>Join the fast lane</p>
                     </div>
                 </div>
             </div>
@@ -275,8 +255,7 @@
                 </div>
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
-                        <p>&copy; Your Company 2014. All Rights Reserved.</p>
-                        <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+                        <p>&copy; QAXE. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

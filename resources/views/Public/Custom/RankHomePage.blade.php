@@ -53,8 +53,8 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                         <li class="active"><a href="{{route('showRankPage')}}">Rank</a></li>
                         <li><a href="{{route('showRiderPage')}}">Rider</a></li>
+                        <li class="active"><a href="{{route('showRankPage')}}">Rank</a></li>
                         <li><a href="{{route('login')}}">Login</a></li>
                     </ul>
                 </div>
