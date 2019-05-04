@@ -740,10 +740,19 @@ Route::group(
          */
 
           Route::get('/', [
-                'as'   => 'showOrganisers',
-                'uses' => 'PassengerController@showOrganisers',
+                'as'   => 'showRiderPage',
+                'uses' => 'HomePageController@showRiderPage',
             ]);
 
+          Route::get('/rider', [
+                'as'   => 'showRiderPage',
+                'uses' => 'HomePageController@showRiderPage',
+            ]);
+
+          Route::get('/rank', [
+                'as'   => 'showRankPage',
+                'uses' => 'HomePageController@showRankPage',
+            ]);
 
             /*
              * Public ranks routes

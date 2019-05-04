@@ -5,7 +5,7 @@
 
                 {{--Attendize is provided free of charge on the condition the below hyperlink is left in place.--}}
                 {{--See https://github.com/Attendize/Attendize/blob/master/LICENSE for more information.--}}
-                @include('Shared.Partials.PoweredBy')
+                @include('Shared.Partials.PoweredBy') <!-- TODO:LU Must purchase a license
 
                 @if(Utils::userOwns($organiser))
                     &bull;
