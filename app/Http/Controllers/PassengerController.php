@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
+use Log;
 class PassengerController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class PassengerController extends Controller
      * @param $organiser_id
      * @return mixed
      */
-    public function showOrganisers()
+    public function showRanks()
     {
         $organiser = Organiser::all(); //TODO:LU Investigate a better way
 
@@ -23,10 +24,10 @@ class PassengerController extends Controller
             'organisers' => $organiser,
         ];
 
-        return view('ManageOrganiser.Ranks', $data);
+        return view('Public.Custom.Ranks', $data);
     }
 
-    public function showEvents(Request $request, $organiser_id)
+    public function showRankQueues(Request $request, $organiser_id)
     {
         $organiser = Organiser::scope()->findOrfail($organiser_id);
 
@@ -50,6 +51,35 @@ class PassengerController extends Controller
             ],
         ];
 
-        return view('ManageOrganiser.Events', $data);
+         return Response($data);
     }
+
+    public function searchRankQueues(Request $request)
+    {
+       $organiser_id = $request->organiser_id;
+       $organiser = Organiser::findOrFail($organiser_id);
+
+        $data = [
+            'tickets' => $organiser->events()->orderBy('created_at', 'desc')->get(),
+        ];
+
+        return Response($data);
+
+    }
+
+    public function showQueuePage(Request $request)
+    {
+           $event_id = $request->input('event_id');
+        Log::info($event_id);
+        $event = Event::findOrFail($event_id);
+
+        $data = [
+            'event'       => $event,
+            'tickets'     => $event->tickets()->where('is_hidden', 0)->orderBy('sort_order', 'asc')->get(),
+            'is_embedded' => '1',
+        ];
+
+        return view('Public.ViewEvent.Embedded.EventPage', $data);
+    }
+
 }

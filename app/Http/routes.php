@@ -759,22 +759,32 @@ Route::group(
              */
 
               Route::get('/ranks', [
-                    'as'   => 'showOrganisers',
-                    'uses' => 'PassengerController@showOrganisers',
+                    'as'   => 'showRanks',
+                    'uses' => 'PassengerController@showRanks',
                 ]);
+
+        Route::get('/e', [
+            'as'   => 'showQueuePage',
+            'uses' => 'PassengerController@showQueuePage',
+        ]);
+
+           /*
+            * Public ranks routes
+            */
+             Route::post('/search', [
+                  'as'   => 'search',
+                  'uses' => 'PassengerController@searchRankQueues',
+               ]);
+             Route::get('/search', [
+                   'uses' => 'PassengerController@searchRankQueues',
+               ]);
+
+
 
           /*
-             * Public queue routes
+             * Public contact us routes
              */
-            Route::group(['prefix' => 'ranks'], function () {
-
-                Route::get('/{organiser_id}/{organier_slug?}', [
-                    'as'   => 'showOrganiserHome',
-                    'uses' => 'OrganiserViewController@showOrganiserHome',
-                ]);
-
-            });
-
-
+            Route::get('contact-us', 'HomePageController@ContactUS');
+            Route::post('contact-us', ['as'=>'contact-us','uses'=>'HomePageController@ContactUS']);
 });
 

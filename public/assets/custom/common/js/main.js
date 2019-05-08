@@ -10,16 +10,11 @@ jQuery(function($) {'use strict';
 		});
 	});
 
-	//Fit Vids
-	if( $('#video-container').length ) {
-		$("#video-container").fitVids();
-	}
-
 	//Initiat WOW JS
 	new WOW().init();
 
 	// portfolio filter
-	$(window).load(function(){
+	$(window).on('load',function(){
 
 		$('.main-slider').addClass('animate-in');
 		$('.preloader').remove();
@@ -62,21 +57,26 @@ jQuery(function($) {'use strict';
 	$('.fa-search').on('click', function() {
 		$('.field-toggle').fadeToggle(200);
 	});
-
-	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-		});
-	});
+//
+//	// Contact form
+//	var form = $('#main-contact-form');
+//	form.submit(function(event){
+//		event.preventDefault();
+//		var form_status = $('<div class="form_status"></div>');
+//		$.ajax({
+//			url: '/contact-us',
+//			beforeSend: function(){
+//				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+//			},
+//             success:function(data){
+//               form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+//             },
+//            error:  function(jqXHR ) {
+//                alert("Unable to find a queue connected to your rank, " + jqXHR);
+//            }
+//
+//		})
+//	});
 
 	// Progress Bar
 	$.each($('div.progress-bar'),function(){
@@ -109,5 +109,42 @@ jQuery(function($) {'use strict';
 			backgroundColor: '#3e8bff',
 		});
 	}
+
+ //select rank
+$(function () {
+  updateQueues();
+  $('select[name=organiser_id]').change(updateQueues);
+});
+
+function updateQueues(){
+    var value=$('select[name=organiser_id]').val();
+    var select = $('select[name=event]');
+    select.empty();
+    var position;
+
+   $.ajax({
+         type : 'get',
+         url :'/search',
+         data:{'organiser_id': value},
+
+         success:function(data){
+            for (position = 0; position < data.tickets.length; position++) {
+                 select.append('<option value='+ data.tickets[position].id +'>' + data.tickets[position].title+ '</option>');
+            }
+         }
+        });
+   }
+
+$("button").click(function(e) {
+    e.preventDefault();
+     var organiser_id = $('select[name=organiser_id]').val();
+     var event_id =  $('select[name=event]').val();
+     if(organiser_id != -1){
+
+         var path =  '/e/'+event_id;
+         console.log(event);
+         window.location = window.location.origin+path;
+     }
+});
 
 });

@@ -2550,6 +2550,13 @@ span.stButton_gradient,
   padding-top: 20px;
 }
 
+.form-control.drop_down{
+  width: 25%;
+}
+
+.transparent_bg {
+ background: transparent;
+}
 /*Features*/
 .feature-inner{
   text-align: center;

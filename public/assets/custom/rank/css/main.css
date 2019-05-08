@@ -2669,6 +2669,10 @@ span.stButton_gradient,
   padding-top: 20px;
 }
 
+.form-control.drop_down{
+  width: 25%;
+}
+
 /*Features*/
 .feature-inner{
   text-align: center;
