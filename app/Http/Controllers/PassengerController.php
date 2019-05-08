@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
-use Log;
+
 class PassengerController extends Controller
 {
     /**
@@ -69,8 +68,7 @@ class PassengerController extends Controller
 
     public function showQueuePage(Request $request)
     {
-           $event_id = $request->input('event_id');
-        Log::info($event_id);
+        $event_id = $request->input('event_id');
         $event = Event::findOrFail($event_id);
 
         $data = [
