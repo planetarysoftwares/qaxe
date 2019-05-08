@@ -1,4 +1,4 @@
-@extends('en.Emails.Layouts.Master') //Lu custom
+@extends('en.Emails.Layouts.Master') {{----Lu custom-----}}
 
 @section('message_content')
 

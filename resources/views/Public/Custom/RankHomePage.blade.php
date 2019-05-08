@@ -46,9 +46,8 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.html">
-                     {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
-                    </a>
+                    {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
+
 
                 </div>
                 <div class="collapse navbar-collapse">
@@ -78,7 +77,7 @@
                     <div class="slide-text">
                         <h1>Skip the Queue</h1>
                         <p>Buy queue tickets online</p>
-                        <a href="#" class="btn btn-common">SELL TICKETS</a>
+                        <a href="{{route('login')}}" class='btn btn-common' >SELL TICKETS</a>
                     </div>
                      {!!HTML::image('assets/custom/rank/images/slider/hill.png','slider image', ['class' => 'slider-hill'])!!}
                      {!!HTML::image('assets/custom/rank/images/slider/house.png','slider image', ['class' => 'slider-house'])!!}
@@ -138,7 +137,7 @@
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
-                                <a href="#" class="btn btn-common">Add a new rank</a>
+                              <a href="{{route('login')}}" class='btn btn-common' >Add a new rank</a>
                              </div>
                         </div>
                     </div>
