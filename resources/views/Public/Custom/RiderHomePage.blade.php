@@ -76,7 +76,7 @@
                 <div class="slide-text">
                     <h1>Skip the Queue</h1>
                     <p>Buy queue tickets online</p>
-                    <a href="{{route('showOrganisers')}}" class="btn btn-common">Buy Tickets</a>
+                    <a href="{{route('showRanks')}}" class="btn btn-common">Buy Tickets</a>
                 </div>
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/house.png','slider image', ['class' => 'img-responsive slider-house'])!!}
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/circle1.png','slider image', ['class' => 'slider-circle1'])!!}
@@ -139,7 +139,7 @@
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
-                              <a href="{{route('showOrganisers')}}" class="btn btn-common">Buy Tickets</a>
+                              <a href="{{route('showRanks')}}" class="btn btn-common">Buy Tickets</a>
                              </div>
                         </div>
                     </div>
@@ -257,21 +257,34 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="contact-form bottom">
                         <h2>Send a message</h2>
-                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                        {!! Form::open(array('url' => route('contact-us'), 'id' => 'main-contact-form')) !!}
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                                {!! Form::text('name', null,
+                                    array('required',
+                                          'class'=>'form-control',
+                                          'placeholder'=>trans("Public_ViewEvent.your_name")))
+                                 !!}
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                                {!! Form::text('email', null,
+                                    array('required',
+                                          'class'=>'form-control',
+                                          'placeholder'=>trans("Public_ViewEvent.your_email_address")))
+                                !!}
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                                {!! Form::textarea('message', null,
+                                    array('required',
+                                          'class'=>'form-control',
+                                          'placeholder'=>trans("Public_ViewEvent.your_message")))
+                                !!}
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                                {!! Form::submit(trans("Public_ViewEvent.send_message_submit"),
+                                  array('class'=>'btn btn-submit')) !!}
                             </div>
-                        </form>
-                    </div>
+                        {!! Form::close() !!}
+                   </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
@@ -282,12 +295,6 @@
         </div>
     </footer>
     <!--/#footer-->
-        <!--JS-->
-        {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/jquery.js') !!}
-        {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/bootstrap.min.js') !!}
-        {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/lightbox.min.js') !!}
-        {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/wow.min.js') !!}
-        {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/main.js') !!}
-        <!--/JS-->
+       @include('Public.Custom.Partials.Footer-Scripts')
 </body>
 </html>
