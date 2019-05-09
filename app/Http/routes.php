@@ -763,28 +763,34 @@ Route::group(
                     'uses' => 'PassengerController@showRanks',
                 ]);
 
-        Route::get('/e', [
-            'as'   => 'showQueuePage',
-            'uses' => 'PassengerController@showQueuePage',
-        ]);
+            Route::get('/e', [
+                'as'   => 'showQueuePage',
+                'uses' => 'PassengerController@showQueuePage',
+            ]);
 
            /*
             * Public ranks routes
-            */
+                */
              Route::post('/search', [
                   'as'   => 'search',
                   'uses' => 'PassengerController@searchRankQueues',
                ]);
              Route::get('/search', [
-                   'uses' => 'PassengerController@searchRankQueues',
-               ]);
+               'uses' => 'PassengerController@searchRankQueues',
+              ]);
 
 
 
           /*
              * Public contact us routes
              */
-            Route::get('contact-us', 'HomePageController@ContactUS');
-            Route::post('contact-us', ['as'=>'contact-us','uses'=>'HomePageController@ContactUS']);
+
+              Route::post('/contact-us', [
+                   'as'   => 'contact-us',
+                   'uses' => 'HomePageController@ContactUS',
+                ]);
+              Route::get('/contact-us', [
+                    'uses' => 'HomePageController@ContactUS',
+                ]);
 });
 
