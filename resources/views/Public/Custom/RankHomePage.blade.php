@@ -286,7 +286,6 @@
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
                         <p>&copy; Qaxe 2014. All Rights Reserved.</p>
-                        <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
                     </div>
                 </div>
             </div>
