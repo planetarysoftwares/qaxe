@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Models\Event;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
@@ -55,6 +56,20 @@ class PassengerController extends Controller
 
     public function searchRankQueues(Request $request)
     {
+
+       $rules = [
+           'organiser_id' => ['required', 'numeric', 'min:0'],
+       ];
+
+       $validator = Validator::make($request->all(), $rules);
+
+       if ($validator->fails()) {
+           return response()->json([
+               'status'   => 'error',
+               'messages' => $validator->messages()->toArray(),
+           ]);
+       }
+
        $organiser_id = $request->organiser_id;
        $organiser = Organiser::findOrFail($organiser_id);
 
@@ -68,6 +83,19 @@ class PassengerController extends Controller
 
     public function showQueuePage(Request $request)
     {
+        $rules = [
+           'event_id' => ['required', 'numeric', 'min:0'],
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+           return response()->json([
+               'status'   => 'error',
+               'messages' => $validator->messages()->toArray(),
+           ]);
+        }
+
         $event_id = $request->input('event_id');
         $event = Event::findOrFail($event_id);
 
