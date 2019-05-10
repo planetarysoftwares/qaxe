@@ -70,7 +70,7 @@ form.submit(function(event){
 
     event.preventDefault();
     var form_status = $('<div class="form_status"></div>');
-    
+
     $.ajax({
             url: '/contact-us',
             data: mailRequest,
