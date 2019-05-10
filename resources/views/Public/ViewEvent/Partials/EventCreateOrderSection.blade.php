@@ -113,10 +113,11 @@
                                     <div class="panel-body">
                                     <!-- TODO :LU Added profile photo -->
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-lg-4 col-lg-offset-4">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.profile_photo")) !!}
-                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo form-control"]) !!}
+                                                    {!!HTML::image('assets/custom/common/images/pic-holder.png','', ['class' => 'pic-holder'])!!}
+                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo custom_upload"]) !!}
                                                 </div>
                                             </div>
                                         </div>
