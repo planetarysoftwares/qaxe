@@ -240,17 +240,17 @@
                     <div class="contact-info bottom">
                         <h2>Contacts</h2>
                         <address>
-                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>
+                        E-mail: <a href="mailto:cs@qaxe.co.za">cs@qaxe.co.za</a> <br>
                         Phone: +1 (123) 456 7890 <br>
-                        Fax: +1 (123) 456 7891 <br>
+
                         </address>
 
                         <h2>Address</h2>
                         <address>
-                        Unit C2, St.Vincent's Trading Est., <br>
-                        Feeder Road, <br>
-                        Bristol, BS2 0UY <br>
-                        United Kingdom <br>
+                        No 4 Nickel Street, <br>
+                        Phase 2, <br>
+                        Nacmbadlane ext <br>
+                        Mthatha, 5099<br>
                         </address>
                     </div>
                 </div>

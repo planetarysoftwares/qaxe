@@ -61,21 +61,22 @@ jQuery(function($) {'use strict';
 //	// Contact form
 var form = $('#main-contact-form');
 form.submit(function(event){
- var name=$('input[name=name]').val();
- var email=$('input[name=email]').val();
- var message=$('textarea[name=message]').val();
+
+    var mailRequest = {
+        name    : $('input[name=name]').val(),
+        email   : $('input[name=email]').val(),
+        message : $('textarea[name=message]').val()
+    }
 
     event.preventDefault();
     var form_status = $('<div class="form_status"></div>');
     var test;
     $.ajax({
             url: '/contact-us',
-            data:{'name': name,
-              'email': email,
-              'message': message},
-               beforeSend: function(){
+            data: mailRequest,
+            beforeSend: function(){
               form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-               },
+            },
             success:function(response){
             if(response.status == 'success'){
                form_status.html('<p class="text-success">Thank you for contact us. As early as possible we will contact you</p>').delay(3000).fadeOut();
