@@ -123,36 +123,33 @@ form.submit(function(event){
 	}
 
  //select rank
-$(function () {
-  updateQueues();
-  $('select[name=organiser_id]').change(updateQueues);
-});
 
-function updateQueues(){
-    var value=$('select[name=organiser_id]').val();
-    var select = $('select[name=event]');
-    select.empty();
-    var position;
+ $('select[name=organiser_id]').change(function () {
+       var organiser_id =$(this).val();
+       var select = $('select[name=event]');
+       select.empty();
+       var position;
 
-   $.ajax({
-         type : 'get',
-         url :'/search',
-         data:{'organiser_id': value},
+      $.ajax({
+            type : 'get',
+            url :'/search',
+            data:{'organiser_id': organiser_id },
 
-         success:function(data){
-            for (position = 0; position < data.tickets.length; position++) {
-                 select.append('<option value='+ data.tickets[position].id +'>' + data.tickets[position].title+ '</option>');
+            success:function(data){
+               for (position = 0; position < data.tickets.length; position++) {
+                    select.append('<option value='+ data.tickets[position].id +'>' + data.tickets[position].title+ '</option>');
+               }
             }
-         }
-        });
-   }
+           });
 
-$("button").click(function(e) {
+ }).change();
+
+//select a new queue on rank  cange
+$("button[name=send_queue]").click(function(e) {
     e.preventDefault();
      var organiser_id = $('select[name=organiser_id]').val();
      var event_id =  $('select[name=event]').val();
-     if(organiser_id != -1){
-
+     if(event_id){
          var path =  '/e/'+event_id;
          console.log(event);
          window.location = window.location.origin+path;
