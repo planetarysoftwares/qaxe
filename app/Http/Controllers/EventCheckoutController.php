@@ -158,7 +158,7 @@ class EventCheckoutController extends Controller
                 /*
                  * Create our validation rules here
                  */
-                $validation_rules['ticket_holder_profile_photo.' . $i . '.' . $ticket_id] = ['required','image', 'mimes:jpeg,jpg,png', 'max:3000']; //LU: Add ticket profile photo validation rule
+                $validation_rules['ticket_holder_profile_photo.' . $i . '.' . $ticket_id] = ['required','image', 'mimes:jpeg,jpg,png', 'max:10000']; //LU: Add ticket profile photo validation rule
                 $validation_rules['ticket_holder_first_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_last_name.' . $i . '.' . $ticket_id] = ['required'];
                 $validation_rules['ticket_holder_email.' . $i . '.' . $ticket_id] = ['required', 'email'];

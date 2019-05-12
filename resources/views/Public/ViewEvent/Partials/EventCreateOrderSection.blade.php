@@ -119,7 +119,7 @@
                                                     <div class="profile-image-container">
                                                       {!! HTML::image('assets/custom/common/images/profile-image-place-holder.png','', ['class' => 'profile-image-place-holder', 'id' => 'profile_image_preview']) !!}
                                                     </div>
-                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo custom_upload"]) !!}
+                                                    {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'required' => 'required', 'oninvalid'=> "this.setCustomValidity('Upload your profile photo')", 'oninput'=> "setCustomValidity('')", 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo custom_upload"]) !!}
                                                 </div>
                                             </div>
                                         </div>
