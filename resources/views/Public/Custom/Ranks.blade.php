@@ -146,7 +146,7 @@
                         <address>
                         No 4 Nickel Street, <br>
                         Phase 2, <br>
-                        Nacmbadlane ext <br>
+                        Ncambedlane ext <br>
                         Mthatha, 5099<br>
                         </address>
                     </div>
