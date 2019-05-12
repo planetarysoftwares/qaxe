@@ -124,7 +124,7 @@
                 <div class="row">
                     <div class="action take-tour">
                         <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <h1 class="title">Put Your rank in the map</h1>
+                            <h1 class="title">Put your rank in the map</h1>
                             <p>Let the world know your ranks whereabouts.</p>
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
