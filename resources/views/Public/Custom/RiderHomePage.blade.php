@@ -184,7 +184,7 @@
                         {!!HTML::image('assets/custom/rider/images/rider/image3.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Easy Payment</h2>
+                        <h2>Easy Checkout</h2>
                         <P>Payment can be made electronic or directly to the queue marshall.</P>
                     </div>
                 </div>
