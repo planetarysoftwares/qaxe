@@ -78,7 +78,7 @@
                             <div class="panel-body">
                                 <p class="title">Queue:</p>
                                 <select class="form-control drop_down"  id="event"  name="event"></select>
-                                <button class="btn btn-success center-block" name="send_queue" type="submit">Submit</button>
+                                <button class="btn btn-primary center-block" name="send_queue" type="submit">Submit</button>
 
                             </div>
                         </div>
