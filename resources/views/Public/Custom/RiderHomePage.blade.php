@@ -208,7 +208,7 @@
                             <a href="#">{!!HTML::image('assets/custom/common/images/capitec.png','', ['class' => 'img-responsive'])!!}</a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/visa.png','', ['class' => 'img-responsive'])!!}</a>
+                            <a href="#">{!!HTML::image('assets/custom/common/images/absa.png','', ['class' => 'img-responsive'])!!}</a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
                             <a href="#">{!!HTML::image('assets/custom/common/images/master.png','', ['class' => 'img-responsive'])!!}</a>
