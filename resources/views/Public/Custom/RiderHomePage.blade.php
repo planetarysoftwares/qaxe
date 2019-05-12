@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.html">
+                    <a href="{{route('showRiderPage')}}">
                      {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
                     </a>
 

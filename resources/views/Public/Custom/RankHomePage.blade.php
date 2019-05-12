@@ -45,9 +45,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-                    {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
-
+                    <a href="{{route('showRankPage')}}">
+                        {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
+                    </a>
 
                 </div>
                 <div class="collapse navbar-collapse">
