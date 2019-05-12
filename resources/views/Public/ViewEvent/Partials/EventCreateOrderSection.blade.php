@@ -116,7 +116,9 @@
                                             <div class="col-lg-4 col-lg-offset-4">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.profile_photo")) !!}
-                                                    {!!HTML::image('assets/custom/common/images/pic-holder.png','', ['class' => 'pic-holder'])!!}
+                                                    <div class="profile-image-container">
+                                                      {!! HTML::image('assets/custom/common/images/profile-image-place-holder.png','', ['class' => 'profile-image-place-holder', 'id' => 'profile_image_preview']) !!}
+                                                    </div>
                                                     {!! Form::file("ticket_holder_profile_photo[{$i}][{$ticket['ticket']['id']}]", [ 'class' => "ticket_holder_profile_photo.$i.{$ticket['ticket']['id']} ticket_holder_profile_photo custom_upload"]) !!}
                                                 </div>
                                             </div>
