@@ -108,6 +108,9 @@
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
                         </div>
                         @endif
+                        <div>
+                            <img alt="{{$attendee->profile_photo}}" src="{{asset($attendee->profile_photo)}}" />
+                        </div>
                     </div>
                 @endif
             @endforeach
