@@ -70,7 +70,7 @@ class GenerateTicket extends Job implements ShouldQueue
             'order'     => $order,
             'event'     => $event,
             'attendees' => $attendees,
-            'css'       => file_get_contents(public_path('assets/stylesheet/ticket.css')),
+            'css'       => file_get_contents(public_path('assets/custom/stylesheet/ticket.css')),
             'image'     => base64_encode(file_get_contents(public_path($image_path))),
             'images'    => $images,
         ];

@@ -71,8 +71,10 @@
                             {{$event->title}}
                                 <h4>@lang("Ticket.organiser")</h4>
                             {{$event->organiser->name}}
+                             <!--- Lu: removes venue
                                 <h4>@lang("Ticket.venue")</h4>
-                            {{$event->venue_name}}
+                                {{$event->venue_name}}
+                                --->
                                 <h4>@lang("Ticket.start_date_time")</h4>
                                 {{$event->startDateFormatted()}}
                                 <h4>@lang("Ticket.end_date_time")</h4>
