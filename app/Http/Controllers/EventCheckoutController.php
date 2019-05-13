@@ -641,12 +641,10 @@ class EventCheckoutController extends Controller
 
                         $img = Image::make($the_file);
 
-                        $img->resize(100, null, function ($constraint) {
+                        $img->resize(150, null, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         });
-
-                        $img->insert(public_path('assets/images/watermark/large-drop-watermark.png'));
 
                         $img->text('Qaxe @@@',10, 10, function($font) {
                            $font->size(28);

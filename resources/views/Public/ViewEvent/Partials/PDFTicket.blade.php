@@ -109,7 +109,7 @@
                         </div>
                         @endif
                         <div>
-                            <img alt="{{$attendee->profile_photo}}" src="{{asset($attendee->profile_photo)}}" />
+                            <img src="{{asset($attendee->profile_photo)}}" />
                         </div>
                     </div>
                 @endif
