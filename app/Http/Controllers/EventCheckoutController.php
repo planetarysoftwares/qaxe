@@ -641,7 +641,7 @@ class EventCheckoutController extends Controller
 
                         $img = Image::make($the_file);
 
-                        $img->resize(150, null, function ($constraint) {
+                        $img->resize(150, 150, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         });
