@@ -110,9 +110,11 @@
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
                         </div>
                         @endif
-                        <div>
-                            <img src="{{asset($attendee->profile_photo)}}" />
+                         <!---Lu Added attende profile photo -->
+                        <div class="profile_photo">
+                           <img src="data:image/png;base64, {{base64_encode(file_get_contents(public_path($attendee->profile_photo)))}}" />
                         </div>
+                         <!---End -->
                     </div>
                 @endif
             @endforeach

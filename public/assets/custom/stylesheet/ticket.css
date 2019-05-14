@@ -115,6 +115,15 @@
     padding: 5px;
     text-align: center;
 }
+.ticket .profile_photo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    text-align: center;
+}
 
 .ticket .logo img {
     max-width: 110px;
