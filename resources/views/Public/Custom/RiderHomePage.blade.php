@@ -102,7 +102,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon2.png')!!}
                         </div>
-                        <h2>Buy Queue Marshell Tickets online</h2>
+                        <h2>Buy Queue Marshall Tickets</h2>
                         <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
                     </div>
                 </div>
