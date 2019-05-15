@@ -185,7 +185,7 @@
                 </div>
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
-                        <p>&copy; QAXE. All Rights Reserved.</p>
+                        <p>&copy; Qaxe 2019. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
