@@ -159,7 +159,7 @@
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>NO Delay,Easy and Quick </h2>
-                        <P>You don't have to wait for your ticket to be processed or go and printout id photo's,you get your ticket and immediately.</P>
+                        <P>You don't have to wait for your ticket to be processed or go and printout id photo's,you get your ticket immediately.</P>
                     </div>
                 </div>
                 <div class="single-features">

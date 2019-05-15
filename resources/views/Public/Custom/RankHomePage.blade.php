@@ -67,8 +67,8 @@
             <div class="row">
                 <div class="main-slider">
                     <div class="slide-text">
-                        <h1>Skip the Queue</h1>
-                        <p>Buy queue tickets online</p>
+                        <h1>Increase Revenue</h1>
+                        <p>Sell queue tickets online</p>
                         <a href="{{route('login')}}" class='btn btn-common' >SELL TICKETS</a>
                     </div>
                      {!!HTML::image('assets/custom/rank/images/slider/hill.png','slider image', ['class' => 'slider-hill'])!!}
