@@ -71,14 +71,20 @@
                             {{$event->title}}
                                 <h4>@lang("Ticket.organiser")</h4>
                             {{$event->organiser->name}}
-                             <!--- Lu: removes venue
+                            <!-- Lu: value which are not relevant fot our business requirements
                                 <h4>@lang("Ticket.venue")</h4>
-                                {{$event->venue_name}}
-                                --->
+                            {{$event->venue_name}}
                                 <h4>@lang("Ticket.start_date_time")</h4>
                                 {{$event->startDateFormatted()}}
                                 <h4>@lang("Ticket.end_date_time")</h4>
-                                {{$order->expiry_date}} <!---TODO:Lu Added order expiry date -->
+                                {{$event->endDateFormatted()}}
+                             End Removing value -->
+                             <!--- Adding custom value -->
+                            <h4>@lang("Ticket.start_date_time")</h4>
+                            {{$order->created_at->format('Y-m-d')}}
+                            <h4>@lang("Ticket.end_date_time")</h4>
+                            {{$order->expiry_date}}
+                            <!-- End adding custom values-->
                         </div>
 
                         <div class="attendee_details">
