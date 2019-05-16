@@ -92,7 +92,6 @@
                             {!!HTML::image('assets/custom/rank/images/rank/icon1.png')!!}
                         </div>
                         <h2>Instant Message</h2>
-                        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -101,7 +100,6 @@
                             {!!HTML::image('assets/custom/rank/images/rank/icon2.png')!!}
                         </div>
                         <h2>Information Distribution</h2>
-                        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
@@ -110,7 +108,6 @@
                             {!!HTML::image('assets/custom/rank/images/rank/icon3.png')!!}
                         </div>
                         <h2>Free marketing</h2>
-                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
                     </div>
                 </div>
             </div>

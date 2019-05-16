@@ -94,7 +94,6 @@
                             {!!HTML::image('assets/custom/rider/images/rider/icon1.png')!!}
                         </div>
                         <h2>Find a Rank To Your Destination</h2>
-                        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -102,8 +101,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon2.png')!!}
                         </div>
-                        <h2>Buy Queue Marshall Tickets</h2>
-                        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
+                        <h2>Buy Queue Marshal Tickets</h2>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
@@ -112,7 +110,6 @@
                             {!!HTML::image('assets/custom/rider/images/rider/icon3.png')!!}
                         </div>
                         <h2>Enjoy Your Ride</h2>
-                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +124,7 @@
                     <div class="action take-tour">
                         <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                             <h1 class="title">Free Up Your Time</h1>
-                            <p>Skip the Queue, Get Queue Marshall tickets online.</p>
+                            <p>Skip the Queue, Get Queue Marshal tickets online.</p>
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
@@ -177,7 +174,7 @@
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Easy Checkout</h2>
-                        <P>Payment can be made electronic or directly to the queue marshall.</P>
+                        <P>Payment can be made electronic or directly to the queue Marshal.</P>
                     </div>
                 </div>
             </div>
