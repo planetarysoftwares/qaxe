@@ -93,7 +93,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon1.png')!!}
                         </div>
-                        <h2>Find a Rank To Your Destination</h2>
+                          <h2>Queue Tickets</h2>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -101,7 +101,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon2.png')!!}
                         </div>
-                        <h2>Buy Queue Marshal Tickets</h2>
+                         <h2>Rank Details</h2>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
@@ -109,7 +109,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon3.png')!!}
                         </div>
-                        <h2>Enjoy Your Ride</h2>
+                        <h2>Rank Location</h2
                     </div>
                 </div>
             </div>
