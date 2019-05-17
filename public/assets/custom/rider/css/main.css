@@ -368,8 +368,6 @@ ul.sub-menu {
 
 #footer {
   padding-bottom: 75px;
-  background-image: url(../images/rider/footer.png);
-  background-repeat: repeat-x;
   background-position: bottom;
   background-size: contain;
 }

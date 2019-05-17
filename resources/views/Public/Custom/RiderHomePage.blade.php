@@ -3,7 +3,7 @@
 <head>
     <title>
         @section('title')
-            QAXE - Buy Tickets online
+            QAXE - Buy Tickets
         @show
     </title>
 
@@ -124,7 +124,7 @@
                     <div class="action take-tour">
                         <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                             <h1 class="title">Free Up Your Time</h1>
-                            <p>Skip the Queue, Get Queue Marshal tickets online.</p>
+                            <p>Skip the Queue, Get Queue Marshal Tickets Online.</p>
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
@@ -155,14 +155,14 @@
                         {!!HTML::image('assets/custom/rider/images/rider/image1.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>NO Delay,Easy and Quick </h2>
+                        <h2>Cheap, Easy and no Delay</h2>
                         <P>You don't have to wait for your ticket to be processed or go and printout id photo's,you get your ticket immediately.</P>
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>No Lost or Damage ticket</h2>
-                        <P>Electronic ticket will never be lost or damage, rather than the paper version of it. In event of lost or damage ticket, just download a new one.</P>
+                        <P>Damaged or lost tickets be replaced immediately by requesting your queue marshal to resend the ticket at no replacement fee.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                        {!!HTML::image('assets/custom/rider/images/rider/image2.png','', ['class' => 'img-responsive'])!!}

@@ -643,8 +643,7 @@ ul.sub-menu {
 }
 
 #action {
-  background-image: url(../images/rank/tour-bg.png);
-  background-color: #fbfafa;
+  background-color: #eee;
   background-repeat: repeat-x;
   height: 157px;
   background-position: center;
@@ -782,7 +781,7 @@ ul.sub-menu {
 }
 
 .tour-button {
-  background-image: url(../images/rank/tour-icon2.png);
+  background-image: url(../images/rank/bus.png);
   height: 100%;
   background-repeat: no-repeat;
   position: absolute;

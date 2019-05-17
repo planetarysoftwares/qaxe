@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="main-slider">
                     <div class="slide-text">
-                        <h1>Increase Revenue</h1>
+                        <h1>Maximize Revenue & ROI</h1>
                         <p>Sell queue tickets online</p>
                         <a href="{{route('login')}}" class='btn btn-common' >SELL TICKETS</a>
                     </div>
@@ -91,7 +91,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
                             {!!HTML::image('assets/custom/rank/images/rank/icon1.png')!!}
                         </div>
-                        <h2>Instant Message</h2>
+                        <h2>Ticket Scanner</h2>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -107,7 +107,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
                             {!!HTML::image('assets/custom/rank/images/rank/icon3.png')!!}
                         </div>
-                        <h2>Free marketing</h2>
+                        <h2>Real-time Tickets Statistics</h2>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                         {!!HTML::image('assets/custom/rank/images/rank/image1.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Increase Revenue</h2>
+                        <h2>Maximize Revenue & ROI</h2>
                         <P>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</P>
                     </div>
                 </div>
