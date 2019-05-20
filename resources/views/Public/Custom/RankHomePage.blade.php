@@ -158,7 +158,7 @@
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Quick and Easy Checkout Process</h2>
+                        <h2>Customizable Tickets - with QR Codes</h2>
                         <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -170,7 +170,7 @@
                         {!!HTML::image('assets/custom/rank/images/rank/image3.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Customizable Tickets - with QR Codes</h2>
+                        <h2>Controlled Access to Customers Data</h2>
                         <P>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</P>
                     </div>
                 </div>
