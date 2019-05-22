@@ -139,6 +139,7 @@ form.submit(function(event){
             success:function(data){
                for (position = 0; position < data.tickets.length; position++) {
                     select.append('<option value='+ data.tickets[position].id +'>' + data.tickets[position].title+ '</option>');
+                    select.selectpicker("refresh");
                }
             }
            });
@@ -152,7 +153,6 @@ $("button[name=send_queue]").click(function(e) {
      var event_id =  $('select[name=event]').val();
      if(event_id){
          var path =  '/e/'+event_id;
-         console.log(event);
          window.location = window.location.origin+path;
      }
 });

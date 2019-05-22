@@ -18,7 +18,7 @@ class PassengerController extends Controller
      */
     public function showRanks()
     {
-        $organiser = Organiser::all(); //TODO:LU Investigate a better way
+        $organiser = Organiser::orderBy('name')->get();//TODO:LU Investigate a better way
 
         $data = [
             'organisers' => $organiser,
@@ -38,8 +38,8 @@ class PassengerController extends Controller
 
         $events = $searchQuery
             ? Event::scope()->where('title', 'like', '%' . $searchQuery . '%')->orderBy($sort_by,
-                'desc')->where('organiser_id', '=', $organiser_id)->paginate(12)
-            : Event::scope()->where('organiser_id', '=', $organiser_id)->orderBy($sort_by, 'desc')->paginate(12);
+                'desc')->where('organiser_id', '=', $organiser_id)
+            : Event::scope()->where('organiser_id', '=', $organiser_id)->orderBy($sort_by, 'asc');
 
         $data = [
             'events'    => $events,
@@ -74,7 +74,7 @@ class PassengerController extends Controller
        $organiser = Organiser::findOrFail($organiser_id);
 
         $data = [
-            'tickets' => $organiser->events()->orderBy('created_at', 'desc')->get(),
+            'tickets' => $organiser->events()->orderBy('title', 'asc')->get(),
         ];
 
         return Response($data);

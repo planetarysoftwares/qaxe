@@ -2547,10 +2547,6 @@ span.stButton_gradient,
   padding-top: 20px;
 }
 
-.form-control.drop_down{
-  width: 25%;
-}
-
 .transparent_bg {
  background: transparent;
 }
@@ -2567,4 +2563,7 @@ span.stButton_gradient,
   -webkit-box-shadow: 0 0 0 5px rgba(0,0,0,.1) inset;
   border-radius: 100%;
   margin: 10px 0;
+}
+.btn.send-queue{
+  margin-top: 5px;
 }

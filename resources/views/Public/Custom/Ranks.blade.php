@@ -12,6 +12,7 @@
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/common/css/font-awesome.min.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/common/css/animate.min.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/common/css/lightbox.css') !!}
+        {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/common/css/bootstrap-select.min.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/rider/css/main.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/rider/css/responsive.css') !!}
     <!--/Style-->
@@ -67,8 +68,7 @@
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <p class="title">Rank:</p>
-                                <div class="status"></div>
-                                <select class="form-control drop_down" id="organiser_id" name="organiser_id">
+                                <select class="selectpicker" id="organiser_id" name="organiser_id"  data-live-search="true">
                                     @foreach($organisers as $organiser)
                                       <option value={{$organiser->id}}>{{$organiser->name}}</option>
                                     @endforeach
@@ -77,8 +77,8 @@
 
                             <div class="panel-body">
                                 <p class="title">Destination:</p>
-                                <select class="form-control drop_down"  id="event"  name="event"></select>
-                                <button class="btn btn-primary center-block" name="send_queue" type="submit">Submit</button>
+                                <select class="selectpicker" id="event"  name="event"  data-live-search="true"></select>
+                                <button class="btn btn-primary center-block send-queue" name="send_queue" type="submit">Submit</button>
 
                             </div>
                         </div>
@@ -193,6 +193,7 @@
     </footer>
 
      @include('Public.Custom.Partials.Footer-Scripts')
+     {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/bootstrap-select.min.js') !!}
 
 </body>
 </html>
