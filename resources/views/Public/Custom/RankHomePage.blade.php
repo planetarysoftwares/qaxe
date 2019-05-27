@@ -126,7 +126,7 @@
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
-                              <a href="{{route('login')}}" class='btn btn-common' >Add a new rank</a>
+                              <a href="{{route('showSignup')}}" class='btn btn-common' >Add a new rank</a>
                              </div>
                         </div>
                     </div>
