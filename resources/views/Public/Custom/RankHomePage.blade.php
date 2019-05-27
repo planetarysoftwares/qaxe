@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="main-slider">
                     <div class="slide-text">
-                        <h1>Maximize Revenue & ROI</h1>
+                        <h1>Maximize Revenue</h1>
                         <p>Sell queue tickets online</p>
                         <a href="{{route('login')}}" class='btn btn-common' >SELL TICKETS</a>
                     </div>
@@ -152,7 +152,7 @@
                         {!!HTML::image('assets/custom/rank/images/rank/image1.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Maximize Revenue & ROI</h2>
+                        <h2>Maximize Revenue</h2>
                         <P>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</P>
                     </div>
                 </div>
