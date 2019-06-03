@@ -27,7 +27,7 @@ class PassengerController extends Controller
         return view('Public.Custom.Ranks', $data);
     }
 
-    public function showRankQueues(Request $request, $organiser_id)
+    public function showRankDestinations(Request $request, $organiser_id)
     {
         $organiser = Organiser::scope()->findOrfail($organiser_id);
 
@@ -54,7 +54,7 @@ class PassengerController extends Controller
          return Response($data);
     }
 
-    public function searchRankQueues(Request $request)
+    public function searchRankDestinations(Request $request)
     {
 
        $rules = [
@@ -81,7 +81,7 @@ class PassengerController extends Controller
 
     }
 
-    public function showQueuePage(Request $request)
+    public function showDestinationPage(Request $request)
     {
         $rules = [
            'event_id' => ['required', 'numeric', 'min:0'],

@@ -741,8 +741,8 @@ Route::group(
                 ]);
 
             Route::get('/e', [
-                'as'   => 'showQueuePage',
-                'uses' => 'PassengerController@showQueuePage',
+                'as'   => 'showDestinationPage',
+                'uses' => 'PassengerController@showDestinationPage',
             ]);
 
            /*
@@ -750,10 +750,10 @@ Route::group(
                 */
              Route::post('/search', [
                   'as'   => 'search',
-                  'uses' => 'PassengerController@searchRankQueues',
+                  'uses' => 'PassengerController@searchRankDestinations',
                ]);
              Route::get('/search', [
-               'uses' => 'PassengerController@searchRankQueues',
+               'uses' => 'PassengerController@searchRankDestinations',
               ]);
 
 

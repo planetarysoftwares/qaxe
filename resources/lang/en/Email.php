@@ -7,11 +7,11 @@ return array (
   //==================================== Translations ====================================//
   'attendize_register' => 'Thank you for registering for Attendize',
   'invite_user' => ':name added you to an :app account.',
-  'message_regarding_event' => 'Message Regarding: :queue',
+  'message_regarding_event' => 'Message Regarding: :destination',
   'organiser_copy' => '[Rank Copy]',
   'refund_from_name' => 'You have received a refund from :name',
   'your_ticket_cancelled' => 'Your ticket has been cancelled',
-  'your_ticket_for_event' => 'Your ticket for the queue :queue',
+  'your_ticket_for_event' => 'Your ticket for the destination :destination',
     //================================== Obsolete strings ==================================//
   'LLH:obsolete' => 
   array (

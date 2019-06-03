@@ -7,7 +7,7 @@ return array (
   //==================================== Translations ====================================//
   'add_question' => 'Add Question',
   'answers' => 'Answers',
-  'event_surveys' => 'Queue Surveys',
+  'event_surveys' => 'Destination Surveys',
   'export_answers' => 'Export Answers',
   'num_responses' => '# Responses',
   'question_delete_title' => 'All answers will also be deleted. If you want to keep passenger\'s answers you should deactivate the question instead.',
