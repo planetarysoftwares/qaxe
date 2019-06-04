@@ -190,22 +190,22 @@
                     </div>
                     <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/standardbank.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/standardbank.png','', ['class' => 'img-responsive'])!!}</a>
                         </div>
                         <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/fnb.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/fnb.png','', ['class' => 'img-responsive'])!!}
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/nedbank.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/nedbank.png','', ['class' => 'img-responsive'])!!}
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/capitec.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/capitec.png','', ['class' => 'img-responsive'])!!}
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/absa.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/absa.png','', ['class' => 'img-responsive'])!!}
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#">{!!HTML::image('assets/custom/common/images/master.png','', ['class' => 'img-responsive'])!!}</a>
+                           {!!HTML::image('assets/custom/common/images/master.png','', ['class' => 'img-responsive'])!!}
                         </div>
                     </div>
                 </div>
