@@ -153,13 +153,14 @@
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Maximize Revenue</h2>
-                        <P>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</P>
+                        <P>Riders are looking for easy, accessible, cheap and time saving solutions to get queue tickets.
+                           Selling tickets online creates a new opportunity to get more riders buying tickets and hence increasing revenue.</P>
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Customizable Tickets - with QR Codes</h2>
-                        <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
+                        <P>Move or change design elements like images, icons, colors and fonts then share your brand new ticket design with the rest of the world to drum up even more excitement.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                        {!!HTML::image('assets/custom/rank/images/rank/image2.png','', ['class' => 'img-responsive'])!!}
@@ -170,8 +171,8 @@
                         {!!HTML::image('assets/custom/rank/images/rank/image3.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Controlled Access to Customers Data</h2>
-                        <P>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</P>
+                        <h2>Easy Access to Data</h2>
+                        <P>QAXE manages data in such a way so that the data is easily accessible with fast response times.</P>
                     </div>
                 </div>
             </div>

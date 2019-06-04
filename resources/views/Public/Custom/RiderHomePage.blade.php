@@ -155,14 +155,14 @@
                         {!!HTML::image('assets/custom/rider/images/rider/image1.png','', ['class' => 'img-responsive'])!!}
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Cheap, Easy and no Delay</h2>
-                        <P>You don't have to wait for your ticket to be processed or go and printout id photo's,you get your ticket immediately.</P>
+                        <h2>Quick, Easy and Safe</h2>
+                        <P>You don’t have to wait in line at the rank office, print id photo, etc. Queue ticket is available immediately.</P>
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>No Lost or Damage ticket</h2>
-                        <P>Damaged or lost tickets be replaced immediately by requesting your queue marshal to resend the ticket at no replacement fee.</P>
+                        <h2>Lost or Damage ticket</h2>
+                        <P>Lost or Damage ticket be replaced immediately by requesting your queue marshal to resend the ticket at no replacement fee.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                        {!!HTML::image('assets/custom/rider/images/rider/image2.png','', ['class' => 'img-responsive'])!!}
