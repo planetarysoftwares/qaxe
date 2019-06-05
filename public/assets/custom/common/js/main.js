@@ -126,6 +126,7 @@ form.submit(function(event){
  //select rank
 
  $('select[name=organiser_id]').change(function () {
+ $('#overlay ').css('display', 'block');
        var organiser_id =$(this).val();
        var select = $('select[name=event]');
        select.empty();
@@ -143,6 +144,10 @@ form.submit(function(event){
                }
             }
            });
+
+            setTimeout(function () {
+                   $('#overlay').css('display', 'none');
+               }, 1000);
 
  }).change();
 

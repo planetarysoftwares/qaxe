@@ -57,6 +57,9 @@
 
     <section id="home-slider">
         <div class="container">
+
+            <div id="overlay"></div>
+
             <div class="main-slider">
 
             <div id="accordion-container">
