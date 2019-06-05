@@ -18,7 +18,7 @@ class PassengerController extends Controller
      */
     public function showRanks()
     {
-        $organiser = Organiser::orderBy('name')->get();//TODO:LU Investigate a better way
+        $organiser = Organiser::select('id', 'name')->orderBy('name')->get();//TODO:LU Investigate a better way
 
         $data = [
             'organisers' => $organiser,
