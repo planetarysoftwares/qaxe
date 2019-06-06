@@ -140,7 +140,7 @@ form.submit(function(event){
             success:function(data){
                for (position = 0; position < data.tickets.length; position++) {
                     select.append('<option value='+ data.tickets[position].id +'>' + data.tickets[position].title+ '</option>');
-                    select.selectpicker("refresh");
+                    $('.selectpicker').selectpicker('refresh');
                }
             }
            });
