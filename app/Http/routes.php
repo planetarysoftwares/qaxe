@@ -758,7 +758,7 @@ Route::group(
 
 
 
-          /*
+           /*
              * Public contact us routes
              */
 
@@ -771,13 +771,19 @@ Route::group(
                 ]);
            /*
                    * Public T&Cs  routes
-                   */
-    Route::get('/terms_and_conditions', [
-        'as' => 'termsAndConditions',
-        function () {
-            return 'TODO: add terms and cond';
-        }
-    ]);
+                          */
+           Route::get('/terms_and_conditions', [
+               'as' => 'termsAndConditions',
+               'uses' => 'LegalController@termsAndConditions',
+           ]);
+
+           /*
+              * Public privacy policy routes
+          */
+           Route::get('/privacy-policy', [
+               'as' => 'privacyPolicy',
+               'uses' => 'LegalController@privacyPolicy',
+           ]);
 
 });
 
