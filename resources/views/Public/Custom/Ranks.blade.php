@@ -81,7 +81,7 @@
                             <div class="panel-body">
                                 <p class="title">Destination:</p>
                                 <select class="selectpicker" id="event"  name="event"  data-live-search="true"></select>
-                                <button class="btn btn-primary center-block send-queue" name="send_queue" type="submit">Submit</button>
+                                <button class="btn btn-common center-block send-queue" name="send_queue" type="submit">Submit</button>
 
                             </div>
                         </div>
