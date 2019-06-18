@@ -59,9 +59,9 @@ class HomePageController extends Controller //LU custom class
         ];
 
         Mail::send('Emails.contactUsMessage', $data, function ($message) use ($data) {
-            $message->to(config('attendize.incoming_email'))
-                ->from($data['sender_email'])
-                ->replyTo($data['sender_email'])
+            $message->to(config('attendize.incoming_email'), config('attendize.outgoing_email_name'))
+                ->from(config('attendize.outgoing_email_noreply'), $data['sender_name'])
+                ->replyTo($data['sender_email'], $data['sender_name'])
                 ->subject(trans("Email.message_regarding_event"));
         });
 
