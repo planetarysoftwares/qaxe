@@ -50,6 +50,12 @@
                      {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
                     </a>
                 </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{route('showRiderPage')}}">Rider</a></li>
+                        <li><a href="{{route('showRankPage')}}">Rank</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
