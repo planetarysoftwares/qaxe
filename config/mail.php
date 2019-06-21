@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => env('mantunelly@gmail.com'), 'name' => env('Nelly')],
+    'from' => ['address' => env('MAIL_FROM_ADDRESS'), 'name' => env('MAIL_FROM_NAME')],
 
     /*
     |--------------------------------------------------------------------------
@@ -106,15 +106,5 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
-
-    'markdown' => [
-        'theme' => 'default',
-
-    'paths' => [
-        resource_path('views/vendor/mail'),
-    ],
-    ],
-
-    'log_channel' => env('MAIL_LOG_CHANNEL'),
+    'sendmail' => '/usr/sbin/sendmail -bs'
 ];

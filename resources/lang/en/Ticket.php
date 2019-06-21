@@ -1,17 +1,14 @@
 <?php
 
-return array (
-  //============================== New strings to translate ==============================//
-  // Defined in file C:\\wamp\\www\\attendize\\resources\\views\\ManageEvent\\Tickets.blade.php
-  'on_sale' => 'On Sale',
-  //==================================== Translations ====================================//
+return array(
   'attendee_ref' => 'Passenger Ref.',
   'coupon_codes' => 'Coupon Codes',
   'create_ticket' => 'Create Ticket',
   'demo_attendee_ref' => '#YLY9U73-1',
   'demo_end_date_time' => 'Mar 18th 5:08PM',
   'demo_event' => 'Demo Destination',
-  'demo_name' => 'Bill Blogs',
+  'demo_first_name' => 'Bill Blogs',
+  'demo_last_name'             => 'Blogs',
   'demo_order_ref' => '#YLY9U73',
   'demo_organiser' => 'Demo Rank',
   'demo_price' => '€XX.XX',
@@ -27,6 +24,7 @@ return array (
   'name' => 'Name',
   'no_tickets_yet' => 'No Tickets Yet',
   'no_tickets_yet_text' => 'Create your first ticket by clicking the button below.',
+  'on_sale'                    => 'On Sale',
   'order_ref' => 'Order Ref.',
   'organiser' => 'Rank',
   'pause' => 'Pause',
