@@ -289,7 +289,7 @@ class TicketGenerator
                 'text' => [
                     $this->shortenText($this->order->event->venue_name, 52),
                     $this->order->event->startDateFormatted(),
-                    $this->order->event->endDateFormatted()
+                    $this->order->expiry_date
                 ]
             ]
         ];
