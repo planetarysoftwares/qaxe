@@ -88,6 +88,9 @@ class TicketGenerator
         // Create the ticket canvas
         $ticket = Image::canvas(1725, 675, $this->order->event->ticket_bg_color);
 
+         // ==================Custom Add user image to the ticket =======================
+         $ticket->insert($this->createProfilePhoto($attendee), 'top-right', 20, 20);
+
         // Add banner image to the ticket
         $ticket->insert($this->createBanner(), 'top-right', 20, 20);
 
@@ -139,6 +142,22 @@ class TicketGenerator
 
         return $this->ticket_banner;
     }
+
+        /** ===============================================Lu Custom========================================
+         * Create the user photo image for the ticket .
+         *
+         * @return \Intervention\Image\Image
+         */
+        private function createProfilePhoto(Attendee $attendee)
+        {
+            $profile_photo = Image::make(public_path($attendee->profile_photo))
+                ->resize(150, null)
+                ->crop(150, 150, 0, 0);
+
+            return $profile_photo;
+        }
+
+        // ===============================================End Custom========================================
 
     /**
      * Create the Organizer Logo image for the ticket if it hasn't already been created.
