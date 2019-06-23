@@ -3,7 +3,7 @@
 @section('message_content')
 Hello,<br><br>
 
-Your order for the event <b>{{$order->event->title}}</b> was successful.<br><br>
+Your order for the destination <b>{{$order->event->title}}</b> was successful.<br><br>
 
 Your tickets are attached to this email. You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
 

@@ -3,7 +3,7 @@
 @section('message_content')
 Hello,<br><br>
 
-You have received a new order for the event <b>{{$order->event->title}}</b>.<br><br>
+You have received a new order for the destination <b>{{$order->event->title}}</b>.<br><br>
 
 @if(!$order->is_payment_received)
     <b>Please note: This order still requires payment.</b>

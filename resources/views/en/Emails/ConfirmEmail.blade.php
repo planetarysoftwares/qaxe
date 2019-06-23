@@ -8,7 +8,7 @@
 </p>
 
 <p>
-    You can create you first event and confirm your email using the link below.
+    You can create you first destination and confirm your email using the link below.
 </p>
 
 <div style="padding: 5px; border: 1px solid #ccc;">

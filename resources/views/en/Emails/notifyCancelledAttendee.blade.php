@@ -4,7 +4,7 @@
 
 <p>Hi there,</p>
 <p>
-    Your ticket for the event <b>{{{$attendee->event->title}}}</b> has been cancelled.
+    Your ticket for the destination <b>{{{$attendee->event->title}}}</b> has been cancelled.
 </p>
 
 <p>
