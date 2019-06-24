@@ -88,14 +88,14 @@ class TicketGenerator
         // Create the ticket canvas
         $ticket = Image::canvas(1725, 675, $this->order->event->ticket_bg_color);
 
-         // ==================Custom Add user image to the ticket =======================
-         $ticket->insert($this->createProfilePhoto($attendee), 'top-right', 20, 20);
-
         // Add banner image to the ticket
         $ticket->insert($this->createBanner(), 'top-right', 20, 20);
 
         // Add organizer logo to the ticket
         $ticket->insert($this->createOrganizerLogo(), 'top-left', 20, 20);
+
+         // ==================Custom Add user image to the ticket =======================
+         $ticket->insert($this->createProfilePhoto($attendee), 'center', 0, 0);
 
         // Add QR image to the ticket
         $ticket->insert($this->createQRCode($attendee), 'top-left', 32, 100);
