@@ -95,10 +95,9 @@ class TicketGenerator
         $ticket->insert($this->createOrganizerLogo(), 'top-left', 20, 20);
 
          // ==================Custom Add user image to the ticket =======================
-         $ticket->insert($this->createProfilePhoto($attendee), 'center', 0, 0);
+         $ticket->insert($this->createProfilePhoto($attendee), 'top-left', 32, 110);
 
-        // Add QR image to the ticket
-        $ticket->insert($this->createQRCode($attendee), 'top-left', 32, 100);
+
 
         if ($this->order->event->is_1d_barcode_enabled) {
             // Add barcode image to the ticket
@@ -119,6 +118,9 @@ class TicketGenerator
 
         // Add price text
         $ticket = $this->createPrice($ticket, $attendee);
+
+        // Add QR image to the ticket
+        $ticket->insert($this->createQRCode($attendee), 'bottom-right', 40, 125);
 
         return $ticket;
     }
@@ -151,8 +153,7 @@ class TicketGenerator
         private function createProfilePhoto(Attendee $attendee)
         {
             $profile_photo = Image::make(public_path($attendee->profile_photo))
-                ->resize(150, null)
-                ->crop(150, 150, 0, 0);
+                ->resize(240, 240);
 
             return $profile_photo;
         }
@@ -187,12 +188,12 @@ class TicketGenerator
     private function createQRCode(Attendee $attendee)
     {
         // Create QR container
-        $qrcontainer = Image::canvas(280, 280, '#ffffff');
+        $qrcontainer = Image::canvas(180, 180, '#ffffff')->opacity(80);
 
         // Create the QR (Recommended Size 240x240)
         $qrcode = Image::make(
-            DNS2D::getBarcodePNG($attendee->private_reference_number, "QRCODE", 240, 240)
-        )->resize(240, 240);
+            DNS2D::getBarcodePNG($attendee->private_reference_number, "QRCODE", 150, 150)
+        )->resize(150, 150);
 
         // Add QR image to the container
         $qrcontainer->insert($qrcode, 'center', 0, 0);
