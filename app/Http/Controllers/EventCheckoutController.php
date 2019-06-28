@@ -639,24 +639,19 @@ class EventCheckoutController extends Controller
 
                         $img = Image::make($the_file);
 
-                        $img->resize(150, 150, function ($constraint) {
+                        $img->resize(240, 240, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         });
-
-                        $img->text('Qaxe @@@',10, 10, function($font) {
-                           $font->size(28);
+                        $img->text($attendee->order_id,10, 10, function($font) {
+                           $font->file(public_path('assets/fonts/OpenSans-Bold.ttf'));
+                           $font->size(15);
                            $font->color('#fdf6e3');
-                           $font->align('center');
-                           $font->valign('bottom');
-                           $font->angle(90);
+                           $font->align('left');
+                           $font->valign('middle');
                         });
 
-                        $img->insert(public_path('assets/images/watermark/small-drop-watermark.png'));
-
-
                         $img->save($full_path_to_file);
-
 
                        $attendee->profile_photo = $relative_path_to_file;
                     }
