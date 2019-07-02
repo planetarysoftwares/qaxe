@@ -103,7 +103,8 @@ input.custom_upload{
      bottom: 0;
      margin: 0;
      padding: 0;
-     font-size: 20px;
+     width: 100%;
+     height: 100%;
      cursor: pointer;
      opacity: 0;
 }
