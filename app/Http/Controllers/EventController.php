@@ -50,7 +50,7 @@ class EventController extends MyBaseController
 
         $event->title = $request->get('title');
         $event->description = strip_tags($request->get('description'));
-        $event->start_date = date('Y-m-d H:i');//TODO:LU Hack to dynamically set the date
+        $event->start_date = date('Y-m-d');//TODO:LU Hack to dynamically set the date
 
         /*
          * Venue location info (Usually auto-filled from google maps)
@@ -82,7 +82,7 @@ class EventController extends MyBaseController
             $event->location_is_manual = 1;
         }
 
-        $event->end_date = date("Y-m-d H:i", strtotime('+1000 year'));//TODO:LU Hack to dynamically set the date
+        $event->end_date = date("Y-m-d", strtotime('+1000 year'));//TODO:LU Hack to dynamically set the date
 
         $event->currency_id = Auth::user()->account->currency_id;
         //$event->timezone_id = Auth::user()->account->timezone_id;
@@ -224,7 +224,7 @@ class EventController extends MyBaseController
         $event->currency_id = $request->get('currency_id');
         $event->title = $request->get('title');
         $event->description = strip_tags($request->get('description'));
-        $event->start_date = date('Y-m-d H:i');//TODO:LU Hack to dynamically set the date
+        $event->start_date = date('Y-m-d');//TODO:LU Hack to dynamically set the date
         $event->google_tag_manager_code = $request->get('google_tag_manager_code');
 
         /*
@@ -266,7 +266,7 @@ class EventController extends MyBaseController
             }
         }
 
-        $event->end_date = date("Y-m-d H:i", strtotime('+1000 year'));//TODO:LU Hack to dynamically set the date
+        $event->end_date = date("Y-m-d", strtotime('+1000 year'));//TODO:LU Hack to dynamically set the date
         $event->event_image_position = $request->get('event_image_position');
 
         if ($request->get('remove_current_image') == '1') {
