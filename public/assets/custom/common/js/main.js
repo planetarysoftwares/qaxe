@@ -147,7 +147,7 @@ form.submit(function(event){
 
             setTimeout(function () {
                    $('#overlay').css('display', 'none');
-               }, 1000);
+               }, 2000);
 
  }).change();
 
