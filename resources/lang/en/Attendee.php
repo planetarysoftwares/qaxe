@@ -9,7 +9,7 @@ return array (
   'scanning' => 'Scanning',
   //==================================== Translations ====================================//
   'attendees' => 'Passengers',
-  'check_in' => 'Check in: :Destination',
+  'check_in' => 'Check in: :event',
   'email' => 'Email',
   'email_address' => 'Email Address',
   'event_attendees' => 'Destination Passengers',

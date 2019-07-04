@@ -68,7 +68,7 @@ return array (
   'login_password_incorrect' => 'Your username/password combination was incorrect',
   'maximum_refund_amount' => 'The maximum amount you can refund is :money',
   'message_successfully_sent' => 'Message Successfully Sent!',
-  'new_order_received' => 'New order received on the destination :destination [:order]',
+  'new_order_received' => 'New order received on the destination :event [:order]',
   'no_organiser_name_error' => 'You must give a name for the destination rank.',
   'nothing_to_do' => 'Nothing to do',
   'nothing_to_refund' => 'Nothing to refund.',
@@ -112,7 +112,7 @@ return array (
   'ticket_successfully_deleted' => 'Ticket Successfully Deleted',
   'ticket_successfully_resent' => 'Ticket Successfully Resent!',
   'ticket_successfully_updated' => 'Ticket Successfully Updated!',
-  'tickets_for_event' => 'Your tickets for the destination :destination.',
+  'tickets_for_event' => 'Your tickets for the destination :event.',
   'whoops' => 'Whoops! Looks like something went wrong. Please try again.',
   'your_password_reset_link' => 'Your Password Reset Link',
 );
