@@ -11,8 +11,7 @@ You have received a new order for the destination <b>{{$order->event->title}}</b
 @endif
 
 
-Order Summary:
-<br><br>
+<h3>Order Summary</h3>
 Order Reference: <b>{{$order->order_reference}}</b><br>
 Order Name: <b>{{$order->full_name}}</b><br>
 Order Date: <b>{{$order->created_at->format(config('attendize.default_datetime_format'))}}</b><br>
@@ -54,15 +53,17 @@ Order Email: <b>{{$order->email}}</b><br>
                 @else
                 {{money($order_item->unit_price, $order->event->currency)}}
                 @endif
-
             </td>
             <td>
-                @if((int)ceil($order_item->unit_price) == 0)
-                -
+                @if ((int)ceil($order_item->unit_booking_fee) > 0)
+                    @if((int)ceil($order_item->unit_price) == 0)
+                    -
+                    @else
+                    {{money($order_item->unit_booking_fee, $order->event->currency)}}
+                    @endif
                 @else
-                {{money($order_item->unit_booking_fee, $order->event->currency)}}
+                    -
                 @endif
-
             </td>
             <td>
                 @if((int)ceil($order_item->unit_price) == 0)
@@ -97,7 +98,7 @@ Order Email: <b>{{$order->email}}</b><br>
             <td>
             </td>
             <td>
-                <b>{{$order->event->organiser->tax_name}}</b>
+                <strong>{{$order->event->organiser->tax_name}}</strong><em>({{$order->event->organiser->tax_value}}%)</em>
             </td>
             <td colspan="2">
                 {{$orderService->getTaxAmount(true)}}

@@ -158,15 +158,17 @@
                                         @else
                                        {{money($order_item->unit_price, $order->event->currency)}}
                                         @endif
-
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
-                                        -
+                                        @if ((int)ceil($order_item->unit_booking_fee) > 0)
+                                            @if((int)ceil($order_item->unit_price) == 0)
+                                            -
+                                            @else
+                                            {{money($order_item->unit_booking_fee, $order->event->currency)}}
+                                            @endif
                                         @else
-                                        {{money($order_item->unit_booking_fee, $order->event->currency)}}
+                                            -
                                         @endif
-
                                     </td>
                                     <td>
                                         @if((int)ceil($order_item->unit_price) == 0)
@@ -201,7 +203,7 @@
                                 <td>
                                 </td>
                                 <td>
-                                    {{$event->organiser->tax_name}}
+                                    <strong>{{$event->organiser->tax_name}}</strong><em>({{$order->event->organiser->tax_value}}%)</em>
                                 </td>
                                 <td colspan="2">
                                     {{ $orderService->getTaxAmount(true) }}

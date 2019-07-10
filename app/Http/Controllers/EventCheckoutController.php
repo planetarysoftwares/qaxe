@@ -41,7 +41,7 @@ class EventCheckoutController extends Controller
 
     /**
      * EventCheckoutController constructor.
-     * @param Request $request
+     * @param  Request  $request
      */
     public function __construct(Request $request)
     {
@@ -54,7 +54,7 @@ class EventCheckoutController extends Controller
     /**
      * Validate a ticket request. If successful reserve the tickets and redirect to checkout
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $event_id
      * @return JsonResponse|RedirectResponse
      */
@@ -96,7 +96,7 @@ class EventCheckoutController extends Controller
         $quantity_available_validation_rules = [];
 
         foreach ($ticket_ids as $ticket_id) {
-            $current_ticket_quantity = (int)$request->get('ticket_' . $ticket_id);
+            $current_ticket_quantity = (int) $request->get('ticket_' . $ticket_id);
 
             if ($current_ticket_quantity < 1) {
                 continue;
@@ -118,7 +118,7 @@ class EventCheckoutController extends Controller
                 'ticket_' . $ticket_id . '.min' => 'You must select at least ' . $ticket->min_per_person . ' tickets.',
             ];
 
-            $validator = Validator::make(['ticket_' . $ticket_id => (int)$request->get('ticket_' . $ticket_id)],
+            $validator = Validator::make(['ticket_' . $ticket_id => (int) $request->get('ticket_' . $ticket_id)],
                 $quantity_available_validation_rules, $quantity_available_validation_messages);
 
             if ($validator->fails()) {
@@ -250,7 +250,7 @@ class EventCheckoutController extends Controller
     /**
      * Show the checkout page
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $event_id
      * @return RedirectResponse|View
      */
@@ -287,7 +287,7 @@ class EventCheckoutController extends Controller
     /**
      * Create the order, handle payment, update stats, fire off email jobs then redirect user
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $event_id
      * @return JsonResponse
      */
@@ -463,7 +463,7 @@ class EventCheckoutController extends Controller
      * Attempt to complete a user's payment when they return from
      * an off-site gateway
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $event_id
      * @return JsonResponse|RedirectResponse
      */
@@ -506,7 +506,7 @@ class EventCheckoutController extends Controller
      * Complete an order
      *
      * @param $event_id
-     * @param bool|true $return_json
+     * @param  bool|true  $return_json
      * @return JsonResponse|RedirectResponse
      */
     public function completeOrder($event_id, $return_json = true)
@@ -523,7 +523,6 @@ class EventCheckoutController extends Controller
             $attendee_increment = 1;
             $ticket_questions = isset($request_data['ticket_holder_questions']) ? $request_data['ticket_holder_questions'] : [];
 
-
             /*
              * Create the order
              */
@@ -533,9 +532,9 @@ class EventCheckoutController extends Controller
             if ($ticket_order['order_requires_payment'] && !isset($request_data['pay_offline'])) {
                 $order->payment_gateway_id = $ticket_order['payment_gateway']->id;
             }
-            $order->first_name = strip_tags($request_data['order_first_name']);
-            $order->last_name = strip_tags($request_data['order_last_name']);
-            $order->email = $request_data['order_email'];
+            $order->first_name = sanitise($request_data['order_first_name']);
+            $order->last_name = sanitise($request_data['order_last_name']);
+            $order->email = sanitise($request_data['order_email']);
             $order->expiry_date = date("Y-m-d", strtotime('+1 month'));//TODO:LU adds order expiry date
             $order->order_status_id = isset($request_data['pay_offline']) ? config('attendize.order_awaiting_payment') : config('attendize.order_complete');
             $order->amount = $ticket_order['order_total'];
@@ -743,7 +742,7 @@ class EventCheckoutController extends Controller
     /**
      * Show the order details page
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $order_reference
      * @return View
      */
@@ -777,7 +776,7 @@ class EventCheckoutController extends Controller
     /**
      * Shows the tickets for an order - either HTML or PDF
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param $order_reference
      * @return Response|View
      */
