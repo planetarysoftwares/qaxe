@@ -62,7 +62,7 @@ class HomePageController extends Controller //LU custom class
             $message->to(config('attendize.incoming_email'), config('attendize.outgoing_email_name'))
                 ->from(config('attendize.outgoing_email_noreply'), $data['sender_name'])
                 ->replyTo($data['sender_email'], $data['sender_name'])
-                ->subject(trans("Email.message_regarding_event"));
+                ->subject(trans("Email.user_message"));
         });
 
         return response()->json([
