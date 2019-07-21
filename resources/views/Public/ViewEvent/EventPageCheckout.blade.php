@@ -17,4 +17,5 @@
 @section('footer')
     <script type="text/javascript" src="/assets/custom/common/js/jquery.js"></script>
     <script type="text/javascript" src="/assets/custom/common/js/holder-profile-photo.js"></script>
+    <script type="text/javascript" src="/assets/custom/common/js/exif.js"></script>
 @stop
