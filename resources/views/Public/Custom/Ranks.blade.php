@@ -72,7 +72,7 @@
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default transparent_bg">
                         <div class="panel-heading">
-                            <h4 class="panel-title text-center">Buying Ticket online</h4>
+                            <h4 class="panel-title text-center">Choose Destination</h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
@@ -87,7 +87,7 @@
                             <div class="panel-body">
                                 <p class="title">Destination:</p>
                                 <select class="selectpicker" id="event"  name="event"  data-live-search="true"></select>
-                                <button class="btn btn-common center-block send-queue" name="send_queue" type="submit">Submit</button>
+                                <button class="btn btn-common center-block send-queue" name="send_queue" type="submit">Search</button>
 
                             </div>
                         </div>
