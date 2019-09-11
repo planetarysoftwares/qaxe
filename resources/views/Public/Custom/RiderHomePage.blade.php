@@ -3,7 +3,7 @@
 <head>
     <title>
         @section('title')
-            QAXE - Buy Tickets
+            QAXE - Buy ticket(s)
         @show
     </title>
 
@@ -67,8 +67,8 @@
             <div class="main-slider">
                 <div class="slide-text">
                     <h1>Skip the Queue</h1>
-                    <p>Buy queue tickets online</p>
-                    <a href="{{route('showRanks')}}" class="btn btn-common">Buy Tickets</a>
+                    <p>Buy queue ticket(s) online</p>
+                    <a href="{{route('showRanks')}}" class="btn btn-common">Buy ticket(s)</a>
                 </div>
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/house.png','slider image', ['class' => 'img-responsive slider-house'])!!}
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/circle1.png','slider image', ['class' => 'slider-circle1'])!!}
@@ -93,7 +93,7 @@
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
                             {!!HTML::image('assets/custom/rider/images/rider/icon1.png')!!}
                         </div>
-                          <h2>Queue Tickets</h2>
+                          <h2>Queue ticket(s)</h2>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -124,11 +124,11 @@
                     <div class="action take-tour">
                         <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                             <h1 class="title">Free Up Your Time</h1>
-                            <p>Skip the Queue, Get Queue Marshal Tickets Online.</p>
+                            <p>Skip the Queue, Get Queue Marshal ticket(s) Online.</p>
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
-                              <a href="{{route('showRanks')}}" class="btn btn-common">Buy Tickets</a>
+                              <a href="{{route('showRanks')}}" class="btn btn-common">Buy ticket(s)</a>
                              </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h1 class="margin-bottom">Why buy tickets online</h1>
+                    <h1 class="margin-bottom">Why buy ticket(s) online</h1>
                 </div>
             </div>
         </div>
@@ -156,13 +156,13 @@
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Quick, Easy and Safe</h2>
-                        <P>You don’t have to wait in line at the rank office, print id photo, etc. Queue ticket is available immediately.</P>
+                        <P>You don’t have to wait in line at the rank office, print id photo's, etc. Queue ticket(s) are available immediately.</P>
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Lost or Damage ticket</h2>
-                        <P>Lost or Damage ticket can be replaced by requesting your queue marshal to resend the ticket at no replacement fee.</P>
+                        <h2>Lost or Damage ticket(s)</h2>
+                        <P>Lost or Damage ticket(s) can be replaced by requesting your queue marshal to resend the lost or damage ticket at no replacement fee.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                        {!!HTML::image('assets/custom/rider/images/rider/image2.png','', ['class' => 'img-responsive'])!!}
