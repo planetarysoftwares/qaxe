@@ -2565,6 +2565,9 @@ span.stButton_gradient,
   border-radius: 100%;
   margin: 10px 0;
 }
+.container .main-slider .panel-body .btn.btn-primary {
+  margin-top: 25px;
+}
 
  #overlay {
    position: fixed;
