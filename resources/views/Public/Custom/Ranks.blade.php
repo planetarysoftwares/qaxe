@@ -15,6 +15,7 @@
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/common/css/bootstrap-select.min.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/rider/css/main.css') !!}
         {!! HTML::style(config('attendize.cdn_url_static_assets').'/assets/custom/rider/css/responsive.css') !!}
+        {!!HTML::style('assets/stylesheet/frontend.css')!!}
     <!--/Style-->
 
 
@@ -87,7 +88,7 @@
                             <div class="panel-body">
                                 <p class="title">Destination:</p>
                                 <select class="selectpicker" id="event"  name="event"  data-live-search="true"></select>
-                                <button class="btn btn-common center-block send-queue" name="send_queue" type="submit">Go to tickets</button>
+                                <button class="btn btn-primary center-block" name="send_queue" type="submit">Go to tickets</button>
 
                             </div>
                         </div>
@@ -133,73 +134,6 @@
         </div>
      </section>
     <!--/#clients-->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center bottom-separator">
-                   {!!HTML::image('assets/custom/rider/images/rider/under.png','', ['class' => 'img-responsive inline'])!!}
-                </div>
-                <div class="col-md-4 col-sm-6">
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="contact-info bottom">
-                        <h2>Contacts</h2>
-                        <address>
-                        E-mail: <a href="mailto:cs@qaxe.co.za">cs@qaxe.co.za</a> <br>
-                        Phone: +1 (123) 456 7890 <br>
-
-                        </address>
-
-                        <h2>Address</h2>
-                        <address>
-                        No 4 Nickel Street, <br>
-                        Phase 2, <br>
-                        Ncambedlane ext <br>
-                        Mthatha, 5099<br>
-                        </address>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="contact-form bottom">
-                        <h2>Send a message</h2>
-                        {!! Form::open(array('url' => route('contact-us'), 'id' => 'main-contact-form')) !!}
-                            <div class="form-group">
-                                {!! Form::text('name', null,
-                                    array('required',
-                                          'class'=>'form-control',
-                                          'placeholder'=>trans("Public_ViewEvent.your_name")))
-                                 !!}
-                            </div>
-                            <div class="form-group">
-                                {!! Form::text('email', null,
-                                    array('required',
-                                          'class'=>'form-control',
-                                          'placeholder'=>trans("Public_ViewEvent.your_email_address")))
-                                !!}
-                            </div>
-                            <div class="form-group">
-                                {!! Form::textarea('message', null,
-                                    array('required',
-                                          'class'=>'form-control',
-                                          'placeholder'=>trans("Public_ViewEvent.your_message")))
-                                !!}
-                            </div>
-                            <div class="form-group">
-                                {!! Form::submit(trans("Public_ViewEvent.send_message_submit"),
-                                  array('class'=>'btn btn-submit')) !!}
-                            </div>
-                        {!! Form::close() !!}
-                   </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="copyright-text text-center">
-                        <p><a href="{{route('termsAndConditions')}}">Terms & Conditions</a> | <a href="{{route('privacyPolicy')}}">Privacy Policy</a> | &copy; Qaxe 2019. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
      @include('Public.Custom.Partials.Footer-Scripts')
      {!! HTML::script(config('attendize.cdn_url_static_assets').'/assets/custom/common/js/bootstrap-select.min.js') !!}
