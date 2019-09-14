@@ -83,8 +83,6 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     padding: 10px 25px;
-    background: -webkit-linear-gradient(#00d0ff, #25ffbf);
-    color: hsl(0, 0%, 0%);
   }
 
   #action .col-sm-5{
@@ -701,7 +699,8 @@ ul.sub-menu {
   font-weight: 300;
 }
 
-.action .btn-common{
+.action .btn-common,
+.action .btn-primary{
   margin-top: 55px;
   float: left;
 }

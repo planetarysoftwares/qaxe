@@ -68,7 +68,7 @@
                 <div class="slide-text">
                     <h1>Skip the Queue</h1>
                     <p>Buy queue ticket(s) online</p>
-                    <a href="{{route('showRanks')}}" class="btn btn-common">Buy ticket(s)</a>
+                    <a href="{{route('showRanks')}}" class="btn btn-primary">Buy ticket(s)</a>
                 </div>
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/house.png','slider image', ['class' => 'img-responsive slider-house'])!!}
                      {!!HTML::image('assets/custom/rider/images/rider/slider/slide1/circle1.png','slider image', ['class' => 'slider-circle1'])!!}
@@ -128,7 +128,7 @@
                         </div>
                         <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="tour-button">
-                              <a href="{{route('showRanks')}}" class="btn btn-common">Buy ticket(s)</a>
+                              <a href="{{route('showRanks')}}" class="btn btn-primary">Buy ticket(s)</a>
                              </div>
                         </div>
                     </div>
