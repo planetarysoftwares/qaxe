@@ -2569,6 +2569,16 @@ span.stButton_gradient,
   margin-top: 25px;
 }
 
+.container .main-slider .panel-body .btn-default:hover,
+.container .main-slider .panel-body .btn-default:focus,
+.container .main-slider .panel-body .btn-default:active,
+.container .main-slider .panel-body .btn-default.active,
+.container .main-slider .panel-body .open>.dropdown-toggle.btn-default {
+	color: #444;
+	background-color: #e6e6e6;
+	border-color: #adadad
+}
+
  #overlay {
    position: fixed;
    display: none;
