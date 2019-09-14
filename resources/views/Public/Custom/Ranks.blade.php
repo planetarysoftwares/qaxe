@@ -41,21 +41,9 @@
         <div class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a href="{{route('showRiderPage')}}">
                      {!!HTML::image('assets/images/logo-dark.png', 'QAXE')!!}
                     </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{route('showRiderPage')}}">Rider</a></li>
-                        <li><a href="{{route('showRankPage')}}">Rank</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
